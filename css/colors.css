@@ -1,10 +1,15 @@
 /* Defina a bolinha branca como cursor do mouse */
 
-body, html {
+body {
+  font-family: 'GoshaSans', sans-serif;
+  font-weight: bold;
   margin: 0;
-  background-color: #090909;
-  padding: 0;
- 
+  background-color: #0a0e12;
+}
+@font-face {
+  font-family: 'GoshaSans';
+  src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+  
 }
 html {
   scroll-behavior: smooth;
@@ -536,12 +541,14 @@ button {
 .vertical-menu a {
   color: #fff;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .vertical-menu a:hover {
-  text-decoration: underline;
+  color: #8b8b8b;
+  transition: 0.2s;
+  text-decoration: none;
 }
-
 .social-icons-footer a {
   color: #fff;
   margin-right: 10px;
@@ -554,9 +561,10 @@ button {
 }
 
 .left ul li {
+  font-family: monospace;
+  font-weight: 100;
   margin-bottom: 5px;
 }
-
 .ggdigital {
   display: flex;
   align-items: center;
@@ -569,24 +577,38 @@ button {
 .ggdigital img {
   max-width: 100px;
 }
-
-
 .footer {
- 
+  position: relative;
   bottom: 0;
   left: 0;
-  padding-top: 10px;
+   padding-top: 0px; 
   border-top: 10px solid #ffffff00;
   border-bottom: 10px solid #ffde04;
   color: #ffffff;
-  width: 100%;margin-top: -5px;
-  background-color: #000000; /* Cor de fundo do footer */
+  width: 100%;
+  margin-top: -15px;
   display: table;
-  justify-content: space-between; /* Distribui as divs laterais nas extremidades */
-  align-items: center; /* Alinha as divs verticalmente */
- 
+  justify-content: space-between;
+  align-items: center;
+}
 
- }
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.footer-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+}
+
+
 
 .footer .left,
 .footer .right {
@@ -616,6 +638,17 @@ button {
   padding: 15px;
   transition: 0s;
 }
+.marginp p {
+  font-size: medium;
+  color: #909090;
+  font-family: monospace;
+  padding-top: 10px;
+}
+.footer .left ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 45px;
+}
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -644,7 +677,7 @@ button {
   top: 50%;
   left: 50%;
   padding: 40px;
-  background: #efefef;
+  background: #efefef00;
   box-sizing: border-box;
 
  
@@ -653,11 +686,16 @@ button {
   justify-content: center;
   color: #0e0912;
 }
-.texttittle h2{
-  margin-top: -50px;
-  color: #525764;
-  font-size: 20px;
-  
+.texttittle h1 {
+  font-family: 'GoshaSans', sans-serif;
+  font-weight: 500;
+}
+.texttittle h2 {
+  margin-top: -10px;
+  color: #ababab;
+  font-family: monospace;
+  font-weight: 200;
+  font-size: 17px;
 }
 
 .login-box p:first-child {
@@ -690,13 +728,14 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: monospace;
   padding: 10px 0;
   font-size: 16px;
-  color: #0e0912;
+  font-weight: 500;
+  color: #9d9d9d;
   pointer-events: none;
   transition: .5s;
 }
-
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -20px;
@@ -978,8 +1017,6 @@ text-align: center;
   left: 20px;
   border-radius: 50%;
   transition: filter 0.3s ease-in-out;
-}.item:hover img {
-  filter: grayscale(100%);
 }
 .container-icons .item img {
   width: 80px;
@@ -1131,11 +1168,14 @@ height: 120px;
 }
 .footer-bottom-div{
   display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .footer-div .center-footer {
-  width: 500px;
+  width: 700px;
   text-align: center;
   font-size: 19px;
+  font-weight: 100;
 }
 @media (max-width: 1100px) {
   .footer {
@@ -1148,13 +1188,17 @@ height: 120px;
     width: 100%;
     background-color: #000000;
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .footer .left, .footer .right {
   color: #000;
+  display: grid;
+  padding: 0px;
+  justify-content: center;
   width: 100%;
-  padding-left: 100px;
+  border-radius: 0px;
+  padding-left: 0px;
   height: 100px;
   background-color: #ffde04;
 }
@@ -1168,11 +1212,19 @@ height: 120px;
   width: 100%;
 }
 .footer-div .center-footer {
-  display: none;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 100;
+  /* padding: 30px; */
 }
-.footer-div .right-footer {
-  display: none;
+.vertical-menu {
+  font-family: monospace;
+  color: #5c5c5c;
+  font-weight: 100;
+  text-align: center;
 }
+
 .ggdigital img {
   width: 30px;
   height: auto;
@@ -1190,10 +1242,11 @@ height: 120px;
 .footer-bottom-div .left i{
   display: none;
 }
-.footer-bottom-div{
+.footer-bottom-div {
   font-size: 12px;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: contents;
 }
 .footer .left {
   display: none;

@@ -1,0 +1,982 @@
+/* Defina a bolinha branca como cursor do mouse */
+
+
+
+body {
+  font-family: 'GoshaSans', sans-serif;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.text-container {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+.text-container h1 {
+  font-family: 'GoshaSans', sans-serif; /* Use a fonte definida anteriormente */
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 10px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.text-container p {
+  font-family: monospace;
+  color: #a5a5a5;
+  font-weight: 100;
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 1500px) {
+  .mobile-space {
+    margin-top: 100px;
+    display: ruby-text;
+    margin-left: 0px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+  .navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform: none;
+   
+  }
+  .navbar-brand {
+    margin-left: 20px;
+    display: none;
+}
+  .navbar-nav {
+    display: none;
+    width: 100%;
+    
+    position: static;
+    transform: none;
+    background-color: rgb(17 17 17);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: transform 0.3s ease-in-out; /* Adicionando transição para a animação */
+    transform: translateY(-100%); /* Começa oculto acima */
+
+  }
+  .navbar-nav.active {
+    display: flex;
+    transform: translateY(0); /* Mostra o menu descendo */
+
+  }
+  .navbar-nav li {
+    width: 100%;
+  }
+  .navbar-nav li a {
+    width: 100%;
+   
+  }
+  .social-icons {
+    float: none;
+    display: none;
+    margin: 0;
+    text-align: center;
+  }
+  .navbar-toggler {
+      display: block;
+      color: #FFF;
+      float: right;
+      margin-top: 10px;
+      margin-right: 50px;
+      font-size: 40px;
+      cursor: pointer;
+  }
+
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  height: 900px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  object-fit: cover;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0); /* semi-transparent background for better readability */
+}
+
+.overlay-content p {
+  margin: 20px 0;
+  font-size: 35px;
+  text-align: center;
+}
+.overlay-content h1{
+  font-size: 75PX;
+  text-align: center;
+  margin: 10px 0;
+}
+
+@keyframes slideOut {
+0% {
+      height: 100%; /* Começa com altura zero */
+     
+  }
+  100% {
+      height: 0; /* Cresce até a altura total */
+      opacity: 1;
+  }
+}
+
+.slideIn {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Adiciona classe para animação */
+.slideIn.active {
+  opacity: 1;
+  transform: translateY(0);
+}.menu-icon {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+.overlay-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30304887; /* Leve tom preto */
+  z-index: 99; /* Certifique-se de que esteja acima de outros elementos */
+}
+
+.d-none {
+  display: none;
+}
+
+
+.textapresentacaodiv{
+  width: 300PX;
+}
+
+/* Mobile Styles */
+
+.footer .left ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 45px;
+}
+  .footer .left i {
+  margin-right: 20px;
+  }
+  .footer .left{
+    padding-left: 50px;
+  }
+  .videointro {
+    width: 100%;
+   
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  .videointro img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 35%;
+    /* transform: translateX(-50%); */
+    /* transition: width 0.2s ease-in-out; */
+} .scroll-to-top {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+  background-color: #b36ef4;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilo para a imagem dentro do botão */
+.scroll-to-top img {
+  width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
+}
+  .divapresentacao{
+    background-color: #61cfff;
+   
+    display: flex;
+    margin-top: -5px;
+    justify-content: center;
+    text-align: center;
+  }
+  .textapresentacao{
+    width: 900px;
+    justify-content: center;
+    display: flow;
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+  }
+
+  .divapresentacao2{
+    margin-top: -10px;
+    background-color: #8945fe;
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .div-apresentacao{
+    display: flex;
+    justify-content: center;
+  }
+  .textapresentacao2{
+    width: 900px;
+    font-size: 35px;
+    color: #fff;
+  }
+  .diferencial img{
+    width: 100%;
+   height: 500px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Colocando acima da imagem */
+  }
+
+.txt-animado{
+  font-size: 70px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 300px;
+}
+.txt-animado span{
+  position: relative;
+ 
+
+}
+.txt-animado span::before{
+  content: ""; 
+  font-weight: bold;
+  color: #19dfff;
+  animation: worlds 10s infinite;
+}
+
+.txt-animado span::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid #fff;
+  right: -10px;
+  opacity: 1;
+  animation: cursor .7s infinite, digita 10s steps(15) infinite;
+  width: calc(100% + 18px);
+  background-color: #3cc7fa;
+}
+
+
+@keyframes digita{
+  10%, 15%, 30%, 35%, 40%, 55%, 70%, 75%, 90%, 95%{
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    width:  calc(100% + 18px);
+  }
+}
+
+@keyframes cursor{
+  0%{
+    border-left: 2px solid #3cc7fa;
+  }
+}
+
+@keyframes worlds{
+  0%, 20%{
+    content: "Estandes para Eventos";
+  }
+  21%, 40%{
+    content: "Projetos 3D e Renders";
+  }
+  41%, 60%{
+    content: "Ativação de Marca";
+  }
+  61%, 80%{
+    content: "Eventos Corporativos";
+  }
+  81%, 100%{
+    content: "Comunicação Visual";
+  }
+}
+.diferencial {
+  position: relative; /* Necessário para o posicionamento absoluto funcionar */
+}
+
+.container {
+  position: absolute;
+  top: 30%;
+  /* left: 57%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1200px; */
+  justify-content: center;  
+  padding-left: 250px;
+  padding-right: 250px;
+  box-sizing: border-box;
+}
+.content {
+  width: 450px; 
+  margin-right: 20px;
+  display: flex;
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no topo da div */
+
+}
+
+
+.content img {
+  width: 100px; /* Ajuste conforme necessário */
+  height: auto;
+  margin-right: 20px;
+  margin-top: 5px; /* Ajuste o valor conforme necessário */
+}
+.content img {
+  margin-top: 0px;
+  width: 100px; /* Ajuste conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 20px;
+}
+
+.content h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.content p {
+  margin: 5px 0 0;
+  font-size: 20px;
+  color: #b0b0b0;
+}
+.colorslide {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+.transition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  z-index: 1;
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide.active ~ .transition {
+  animation: slideOut1 0.5s ease forwards;
+}
+
+@keyframes slideOut1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.carousel-container {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 950px;
+  /* box-shadow: 0px 0px 20px #303048; */
+  /* border-radius: 15px; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.dot {
+  width: 30px;
+  height: 30px;
+  background-color: #1d2227;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot {
+  position: relative; /* Adicione esta propriedade */
+}
+
+.dot.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.contatoarp{
+  display: flex;
+  padding: 100px;
+  color: #fff;
+  justify-content: center;
+  background-color: #000;
+}
+
+.left img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+  height: auto; /* Mantém a proporção da imagem */
+}
+.ggdigital img {
+  width: 80px;
+  height: auto;
+}
+.ggdigital {
+justify-content: center;
+display: flex;
+}
+ 
+.right {
+ width: 620PX;
+  padding: 0 20px; /* Adiciona um espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.divider {
+  width: 1px; /* Largura da barra vertical */
+  height: 80%; /* Altura da barra vertical */
+  background-color: white; /* Cor da barra vertical */
+}
+.right p{
+  font-size: 20px;
+
+}
+.right h1 {
+  font-size: 50px;
+  margin-top: 0; /* Remove o espaço superior padrão do título */
+}
+
+button {
+  /* Seus estilos de botão aqui */
+}
+
+.navdots {
+ padding-bottom: 10px;
+  padding-top: 50px;
+  margin-top: -20px;
+  background-color: #0a0e12;
+}
+.slide {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+}
+
+
+
+.containerinfo {
+  display: flex;
+  padding-top: 70px ;
+  align-items: center;
+}
+
+.videoinfo {
+
+  margin-right: 20px; /* Espaço entre o vídeo e o texto */
+}
+
+.textinfo {
+  WIDTH: 800PX;
+  margin-right: 150px;
+  margin-left: 50px;
+  color: #303048;
+}
+/* Para garantir que o vídeo ocupe toda a largura disponível */
+.videoinfo video {
+  width: 100%;
+  BOX-SHADOW: 0px 0px 20px #828282;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 100%;
+}
+
+
+
+
+
+
+
+.containerinfo2 {
+  display: flex;
+  padding-top: 100px ;
+  align-items: center;
+}
+
+.videoinfo2 {
+  
+  margin-left: 20px; /* Espaço entre o texto e o vídeo */
+}
+
+.textoinfo2 {
+  WIDTH: 800PX;
+  margin-left: 150px;
+ margin-right: 50px;
+  color: #303048;
+  text-align: right;
+
+}
+
+/* Para garantir que o vídeo ocupe toda a largura disponível */
+.videoinfo2 video {
+  width: 100%;
+  BOX-SHADOW: 0px 0px 20px #828282;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+}
+
+.imagem-background {
+  position: absolute;
+  z-index: 999; /* Define a ordem de empilhamento para trás */
+}.imagem-background img {
+  width: 500px;
+  margin-top: -200px;
+  margin-left: 100px;
+}
+.marginp p {
+  font-size: medium;
+  color: #909090;
+  font-family: monospace;
+  padding-top: 10px;
+}
+.imagem:hover {
+  transform: scale(1.2); /* Aumenta o tamanho da imagem em 20% quando o mouse passa por cima */
+}
+.imagem-container {
+  display: flex;
+  margin-top: 0px;
+}
+
+.imagem {
+  width: 250px;
+  height: 200px;
+  /* height: auto; */
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.imagem:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% quando o mouse passa por cima */
+}
+
+.imagensportifolio{
+  margin-top: 10px;
+}
+
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.login-box p:last-child {
+  color: #181616;
+  font-size: 17 px;
+}
+
+.login-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+.contact-info {
+ width: 400px;
+ color: #fff;
+ text-align: left;
+  margin-left: 100px; /* Ajuste conforme necessário */
+}
+#formdiv {
+  height: 750px;
+  background-image: url('../assets/formimg.png');
+  /* Adicione outras propriedades de estilo conforme necessário */
+}
+.contactbutton{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 25px;
+  border: none;
+  font-weight: bold;
+}
+.contactbutton:hover{
+  background-color: #000000;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+  transform:none;
+}
+
+.divtext{
+justify-content: center;
+font-size: 15px;
+
+color: #fff;
+text-align: center;
+}
+
+.divforms {
+  justify-content: center ;
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+.divforms img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+      .form-contact-top {
+          display: flex;
+          justify-content: space-between;
+      }
+      .form-contact-top form {
+          border: 2px solid white;
+          border-radius: 20px;
+          width: 469px;
+          padding: 50px;
+      }
+      .form-contact-top form input{
+          border-radius: 10px;
+          padding: 18px;
+          width: 428px;
+
+      }
+      .form-contact-top form select {
+          border-radius: 10px;
+          padding: 10px;
+          width: 470px;
+      }
+      .btn-form1{
+          background-color: #17D5ff;
+      }
+      .form-left {
+          flex: 1;
+          display: flex;
+          width: 413px;
+          margin-right: 94px;
+          justify-content: right;
+      }
+      .form-right {
+          flex: 1;
+          text-align: center;
+      }
+#topo a.current {
+  color: #19dfff; 
+}
+
+
+
+/*TEXTO-EMPRESAS*/
+.texto-empresas {
+  text-align: center;
+  background-color: #0e0912;
+ 
+}
+.texto-empresas h1{
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 30px;
+
+}
+.grupo-divs {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+.empresa p {
+  margin-top: 10px;
+}
+
+
+.empresa {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.empresa img {
+  height: 150px;
+  transition: transform 0.5s;
+}
+
+.empresa .descricao {
+  position: absolute;
+ 
+  left: 0;
+  width: 100%;
+  background-color:transparent;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+.empresa .descricao h2{
+  color: #17D5ff;
+  font-weight: bold;
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+.container-icons .item {
+  display: flex;
+  align-items: center;
+  background-color: #ececec;
+  padding: 20px;
+  width: 320px;
+  text-align: left;
+  border-radius: 8px;
+  /* flex: 1 1 calc(25% - 20px); */
+  box-sizing: border-box;
+}
+.container-icons .item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.container-icons .item h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.container-icons .item p {
+  margin: 0;
+}
+.custom-list {
+  list-style-type: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.custom-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Cor do texto */
+  display: flex;
+  align-items: center;
+}
+
+.custom-icon {
+  display: inline-block;
+  width: 20px; /* Tamanho do ícone */
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%; /* Formato de bolinha */
+  background-color: #b36ef4; /* Cor roxa personalizada */
+  color: #fff; /* Cor do ícone */
+  margin-right: 10px;
+  font-size: 12px; /* Tamanho da fonte do ícone */
+}
+.faixa {
+  width: 100%;
+  height: 200px;
+  background-color: #ccc; /* Pode alterar para a cor desejada */
+  overflow: hidden; /* Garante que o conteúdo que ultrapassar a div seja escondido */
+  position: relative;
+}
+
+.faixa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorção */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+

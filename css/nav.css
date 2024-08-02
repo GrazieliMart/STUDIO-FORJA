@@ -1,13 +1,15 @@
 
 /* Defina a bolinha branca como cursor do mouse */
 
-body, html {
-    margin: 0;
-    overflow-x: hidden;
-    background-color: #090909;
-    padding: 0;
-      
-  }
+body {
+  font-family: 'GoshaSans', sans-serif;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'GoshaSans';
+  src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+  
+}
   html {
     scroll-behavior: smooth;
   }
@@ -22,8 +24,20 @@ body, html {
     -webkit-touch-callout: none; /* Impede a chamada de contexto no iOS */
   }
 
-
-
+  .navbar-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+}
+.navbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
   .overlaytop {
   position: fixed;
     bottom: 0; /* Modificado para bottom */
@@ -87,28 +101,29 @@ body, html {
     margin: 0 auto;
     position: fixed;
     top: 0;
-    border-top: 10px solid #ffde04;
+  
     left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.486);
     transform: none;
-    background-color: rgb(17 17 17);
+    background-color: #000000;
     backdrop-filter: blur(10px);
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     z-index: 999;
 }.navbar .social-icons a i {
-    background-color: #FFDE04; /* Cor de fundo */
-    color: #000000; /* Cor do ícone */
-    border-radius: 50%; /* Torna o fundo redondo */
-    padding: 10px; /* Espaço interno */
-    margin: 0 5px; /* Espaço entre os ícones */
-    display: inline-block; /* Garante que o padding funcione corretamente */
-    transition: background-color 0.3s, color 0.3s; /* Animação para hover */
+  background-color: #ffde0400;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar .social-icons a i:hover {
-    background-color: #c0aa2e; /* Cor de fundo ao passar o mouse */
-    color: FFDE04; /* Cor do ícone ao passar o mouse */
+  transition: 0.2s;
+    background-color: #c0aa2e00; /* Cor de fundo ao passar o mouse */
+    color: #adadad; /* Cor do ícone ao passar o mouse */
 }
 
   .navbar-brand {
@@ -136,18 +151,25 @@ body, html {
   .navbar-nav li {
     float: left;
   }
-  .navbar-nav li a {
+  @font-face {
+    font-family: 'GoshaSans';
+    src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+.navbar-nav li a {
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
-    font-size: 20px;
+    font-family: 'GoshaSans', sans-serif; /* Use a fonte definida anteriormente */
+    font-size: 14px;
     padding-top: 30px;
     text-decoration: none;
     transition: 0.2s;
-  }
+}
   .navbar-nav li a:hover {
-    color: #FFDE04;
+    color: #aaaaaa;
    
   }
 
@@ -185,7 +207,7 @@ body, html {
   }
   .social-icons-footer a:hover {
     cursor: pointer;
-    color: #ffffff;
+    color: #141414;
     transition: 0.2s;
   }
   .navbar-toggler
@@ -208,21 +230,22 @@ body, html {
       margin-left: 20px;
       display: none;
   }
-    .navbar-nav {
-      display: none;
-      width: 100%;
-      
-      position: static;
-      transform: none;
-      background-color: rgb(17 17 17);
-      backdrop-filter: blur(10px);
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-      transition: transform 0.3s ease-in-out; /* Adicionando transição para a animação */
-      transform: translateY(-100%); /* Começa oculto acima */
-  
-    }
+  .navbar {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    border-top: 10px solid #ffde04;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: 999;
+}
     .navbar-nav.active {
       display: flex;
       transform: translateY(0); /* Mostra o menu descendo */
@@ -319,11 +342,11 @@ body, html {
   height: 400px;
 }
 .social-icons-footer {
-  float: right;
+  float: left;
   font-size: 25px;
   display: flex;
   margin-right: 0px;
-  padding-top: 0px;
+  padding-top: 30px;
 }
 
 }

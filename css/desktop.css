@@ -5,18 +5,16 @@
     /* largura da barra de rolagem */
   }
   
-  @font-face {
-    font-family: 'GoshaSans';
-    src: url('.../fonts/GoshaSans-Bold.otf') format('opentype'); /* Verifique se o caminho está correto */
-    font-weight: bold;
-    font-style: normal;
-}
 
-/* Agora você pode usar a nova fonte em seu CSS */
 body {
     font-family: 'GoshaSans', sans-serif;
+    font-weight: bold;
 }
-
+@font-face {
+  font-family: 'GoshaSans';
+  src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+  
+}
   ::-webkit-scrollbar-track {
     background: #000000; /* cor de fundo da barra de rolagem */
   }
@@ -139,7 +137,7 @@ body {
   .contact-buttom {
     padding: 10px;
     background-color: #ffffff;
-    border-radius: 50px;
+    border-radius: 0px;
     border: none;
     font-weight: bold;
 }
@@ -147,15 +145,15 @@ body {
     transition: 0.2s;
     transform: scale(1.1);
     cursor: pointer;
-    color: #ffffff;
-    background-color: #6d6d6d;
+    color: #2b2b2b;
+    background-color: #FFDE04;
     
 }
 .contact-buttom-white {
     padding: 10px;
     width: 200px;
     background-color: 000000;
-    border-radius: 50px;
+    border-radius: 0px;
     padding-left: 20px;    border: none;
     font-weight: bold;
 }
@@ -246,8 +244,8 @@ form {
 .login-box {
   /* height: 1080px; */
   top: 50%;
-  margin-top: 100px;
-  display: flex;
+  margin-top: 70px;
+  display: grid;
   left: 50%;
   padding: 40px;
   background: #ececec;
@@ -263,6 +261,73 @@ form {
   color: #525764;
   font-size: 20px;
   
+}.map-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around; /* Distribui o espaço entre os elementos */
+  align-items: center; /* Alinha verticalmente os itens */
+  padding: 20px; /* Adiciona algum padding */
+}
+
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.map-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+}
+
+.map-div {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map-text {
+  margin-left: -100px;
+  width: 500px;
+  padding: 10px;
+  z-index: 1; /* Garante que o texto fique acima do fundo */
+}
+
+.map-text hr {
+  margin-left: -300px;
+  margin-top: 20px;
+  left: -100px;
+  border: navajowhite;
+  background-color: #ffde04;
+  height: 3px;
+}
+
+.map-text p {
+  font-size: 20px;
+}
+
+.map-text img {
+  margin-bottom: -50px;
+  width: 300px;
+  height: 300px;
+}
+
+.map-image {
+  display: flex;
+  justify-content: flex-end; /* Alinha a imagem à direita dentro da div */
+  z-index: 1; /* Garante que a imagem fique acima do fundo */
+}
+
+.map-image img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da div */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .texttittle img{
@@ -592,10 +657,10 @@ max-width: 600px;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffde04;
+  background-color: #000000;
   color: #fff;
   width: 100px;
-  box-shadow: 0px 0px 10px #3f3f3f61;
+  /* box-shadow: 0px 0px 10px #3f3f3f61; */
   height: 100px;
   text-align: center;
   border-radius: 50%;
@@ -617,20 +682,21 @@ max-width: 600px;
   padding: 20px;
 }
 
-  .containerwork .item {
-    position: relative;
-    margin: 5PX;
-  }
-  
+.containerwork .item {
+  position: relative;
+  margin:5PX;
+}
   .containerwork .item img {
     height: 100%;
     border-radius: 0
     ;
-    width: 600px; /* ajuste conforme necessário */
+    width: 550px; /* ajuste conforme necessário */
   }
   .containerwork .text-overlay h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
-  }
+    font-family: 'GoshaSans', sans-serif;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
   .itensoverlay{
     justify-content: left;
@@ -650,7 +716,7 @@ max-width: 600px;
     color: white;
     z-index: 1;
 }
- 
+
   .division img{
     width: 100%;
   }
@@ -808,7 +874,7 @@ max-width: 600px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(119, 64, 182, 0.822);
+    background-color: rgba(255, 217, 0, 0.856);
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.5s, height 0.5s; /* Adicionada transição para altura */
     height: 0; /* Começa com altura zero */
@@ -823,34 +889,35 @@ max-width: 600px;
     height: 100%; /* Expande para cobrir a imagem */
   }
   
-.containerwork .text-overlay {
+  .containerwork .text-overlay {
     justify-content: end;
     position: absolute;
-    top: 60%;
-    left: 35%;
-    width: 400px;
+    top: 40%;
+    left: 0;
+    width: 100%;
     font-weight: bold;
     /* bottom: 0px; */
-    text-align: left;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    transform: none; 
     color: white;
     z-index: 1;
 }
-  .containerwork .overlay1 p,
-.containerwork .overlay1 button {
-    justify-content: end;
-    position: absolute;
-    top: 83%;
-    left: 20%;
-    font-weight: bold;
-    /* bottom: 0px; */
-    text-align: left;
-    transform: translate(-50%, -50%);
-    color: white;
+.containerwork .overlay1 p, .containerwork .overlay1 button {
+  justify-content: end;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  font-weight: bold;
+  /* bottom: 0px; */
+  text-align: left;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .containerwork .overlay1 p {
-  margin-bottom: 20px; /* Espaçamento inferior para o botão */
+  margin-bottom: 20px;
+  font-weight: 100;
+  margin-top: 30px;
 }
   
   .cotacao-div{
@@ -1082,3 +1149,49 @@ max-width: 600px;
   text-align: center;
 }
 
+@media (max-width: 1500px) {
+  .containerwork .item img {
+    height: 100%;
+    border-radius: 0;
+    width: 110px;
+}
+.containerwork {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #efefef;
+  justify-content: center;
+  padding: 0px;
+}
+.containerwork .overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(255, 217, 0, 0.856);
+  opacity: 0;
+  transition: opacity 0.5s, height 0.5s;
+  height: 0;
+}
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: #fff;
+  width: 50px;
+  /* box-shadow: 0px 0px 10px #3f3f3f61; */
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.scroll-to-top img {
+  width: 20px;
+  height: auto;
+  margin-top: 15px;
+}
+}

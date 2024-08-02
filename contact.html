@@ -11,14 +11,342 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>studio forja</title>
     <style>
-      
+        .full-width-section {
+            position: relative;
+            width: 100%;
+            background-color: #0a0e12;
+            height: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+        .navbar {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    border-top: 5px solid #ffde0400;
+    left: 0;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0%);
+    transform: none;
+    background-color: rgb(0 0 0 / 0%);
+    backdrop-filter: blur(0px);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: 999;
+}
+.social-icons {
+    float: right;
+    margin-right: 70px;
+    padding-top: 15px;
+}
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz com que a imagem cubra toda a div */
+            z-index: 1; /* Coloca a imagem atrás dos outros elementos */
+        }
+        .text-left {
+            color: rgb(226, 226, 226);
+            font-size: 54px;
+            margin-top: 600px;
+            margin-bottom: 0px;
+            font-weight: 100;
+            z-index: 2;
+            bottom: 0px;
+            margin-left: 250px;
+        }
+        .div-right {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    z-index: 4;
+    margin-right: px;
+    width: 550px;
+    right: 15%;
+    color: white;
+    border-radius: 5px;
+    height: 800px;
+    box-shadow: 0px 0px 10px #00000021;
+    margin-top: 100px;
+    position: fixed;
+}
+.horizontal-section {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    padding: 70px;
+    background-color: #f0f0f0;
+}
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    align-items: flex-start;
+}
+.vertical-text a{
+    text-decoration: none;
+    color: #888888;
+    font-weight:900;
+}
+.vertical-text a:hover{
+
+    text-decoration: underline;
+
+}
+       .icon-group {
+      margin-top: 100px;
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-around;
+    width: 10px;
+}
+        .icon-group i {
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.2s;
+        }
+        .icon-group a {
+            text-decoration: none;
+            color: #000000;
+            display: flex;
+            line-height: 100px;
+            font-size: 15px;
+            margin: 0 10px;
+        }
+        .icon-group a:hover{
+            color: rgb(128, 128, 128);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .icon-group i:hover{
+            color: rgb(141, 141, 141);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .button-container {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right:150px;
+        }
+       
+        .div-right {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    z-index: 4;
+    width: 550px;
+    border-bottom: 6px solid #ffde04;
+  
+    right: 15%;
+    color: white;
+    border-radius: 5px;
+    height: 800px;
+    box-shadow: 0px 0px 10px #00000021;
+    margin-top: 100px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button-right {
+    background-color: gold;
+    padding: 15px;
+    cursor: pointer;
+    margin-right: -0px;
+    width: 100px;
+    border: none;
+    transition: 0.2s;
+}
+.button-right:hover{
+    color: #fff;
+    transition: 0.2s;
+    background-color: rgb(141, 141, 141);
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@font-face {
+  font-family: 'GoshaSans';
+  src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+  
+}
+.div-right {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1.0s ease-out;
+}
+
+.div-right.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+.btn-contact {
+    justify-content: end;
+    display: flex;
+}
+@media (max-width: 1500px) {
+    .navbar {
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        border-top: 10px solid #ffde04;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: none;
+        background-color: rgb(0, 0, 0);
+        backdrop-filter: blur(10px);
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        z-index: 999;
+    }
+    .div-right {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        z-index: 4;
+        width: 100%;
+        right: 0%;
+        color: white;
+        border-radius: 5px;
+        height: 750px;
+        box-shadow: 0px 0px 10px #00000021;
+        margin-top: -60px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .horizontal-section {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    padding: 7px;
+    background-color: #000000;
+}
+.icon-group a {
+    text-decoration: none;
+    color: #ffde04;
+    display: flex;
+    line-height: 100px;
+    font-size: 15px;
+    margin: 0 10px;
+}
+.icon-group i {
+    text-decoration: none;
+    color: #ffde04;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+.icon-group {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 0px;
+    justify-content: space-around;
+    width: 10px;
+}
+.button-container {
+    margin-top: 20px;
+    display: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 150px;
+}
+.text-left {
+    color: rgb(226, 226, 226);
+    font-size: 54px;
+    margin-top: 600px;
+    margin-bottom: 0px;
+    font-weight: 100;
+    display: none;
+    z-index: 2;
+    bottom: 0px;
+    margin-left: 250px;
+}
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.1s ease-out; /* Adiciona uma transição suave */
+}
+
     </style>
 </head>
-<body style="background-color: aliceblue;">
+<body style="background-color: #fbfbfb;">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/ancoras.js"></script>
-    <div class="overlaytop"></div>
+
 
     <nav class="navbar">
         <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Logo"></a>
@@ -27,10 +355,10 @@
             <i class="bi bi-x menu-icon d-none"></i>
         </div>
         <ul class="navbar-nav">
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <div class="social-icons">
             <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
@@ -40,96 +368,111 @@
     </nav>
     <div class="overlay-nav d-none"></div>
 
-    <div class="container">
-        <div class="image-container"><img src="assets/contact-image.png" alt=""></div>
-        <div class="formdiv1" style="">
-          <div class="contact-form">
-           
-             <div class="login-box">
-     <form> <div class="texttittle">
-      <img src="assets/LOGO2.png" alt=""><h1>GOT A PROJECT OR A PARTNERSHIP IN MIND?</h1><br>
-  <h2>Contact us filling the form bellow or if you feel confortable <br>access our <span>WhatsApp</span></h2></div>
-       <div class="user-box">
-           <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+">
-           <label>Your name</label>
-       </div>
-       <div class="user-box">
-        <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
-        <label>Name of your Company</label>
-    </div>
-    
-       <div class="user-box">
-           <input required="" name="email" type="email">
-           <label>Email</label>
-       </div>
-       <div class="user-box">
-           <input required="" name="celular" type="tel" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
-           <label>Celphone</label>
-       </div>
-       <div class="user-box">
-           <input required="" name="sobre-sua-empresa" type="text">
-           <label>About your project</label>
-       </div>
-       <div class="g-recaptcha" data-sitekey="6LfvXuApAAAAAGpafYyAnTgwlnn6DS3Eq6bLZWHv"></div>
-       <br/>
-       <button class="contact-buttom">Enviar</button>
-       
-         
-     </form>
-     </div>
-           
-         
-       </div> 
-      </div> 
-    </div>
-    
-   
-<div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.36595436683!2d-6.410508055812864!3d53.32441163088279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Irlanda!5e0!3m2!1spt-BR!2sbr!4v1720827503160!5m2!1spt-BR!2sbr" width="100%" height="200" style="margin-bottom:-20px; border: none;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-
-    <footer class="footer">
-
-        <div class="footer-div">
-            <div class="left-footer"><img src="assets/logo.png" alt=""></div>
-            <div class="center-footer"><p>" I've always been drawn to the overlap between design and construction. I enjoy each aspect, and love building projects from start to finish, for clients all over the country. "  - <span>Caio Pazini, Owner</span></p></div>
-            <div class="right-footer">
-                <ul class="vertical-menu">
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul></div>
+    <!-- Nova seção full-width -->
+    <div class="full-width-section">
+        <img src="assets/contact.png" alt="Background Image" class="background-image">
+        <div class="text-left">
+            Contact Us
         </div>
-     <div class="footer-bottom-div">
-        <div class="left">
-            <ul>
-                <li><i class="bi bi-envelope"></i> marketing@forjaworks.com</li>
-                <br>
-                <li><i class="bi bi-phone-vibrate-fill"></i> (11) 97438-1506</li>
-            </ul>
-        </div>
-        <div class="center">
-            <p>© 2024 studio forja I All rights reserved.</p>
-            <div class="ggdigital">
-                <div class="marginp"><p>Desenvolvido por</p></div>
-                <span>
-                    <a href="https://marketinggdigital.com/">
-                        <img src="assets/ggdigital.webp" alt="">
-                    </a>
-                </span>
+        <div class="div-right">
+            <div class="login-box">
+                <form method="POST" name="contact-page" data-netlify="true" onSubmit="submit">
+                    <div class="texttittle">
+                        <h1>Get in touch and let's get start</h1><br>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Company Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="email" type="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Role</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="sobre-sua-empresa" type="text">
+                        <label>About your Project</label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LfvXuApAAAAAGpafYyAnTgwlnn6DS3Eq6bLZWHv"></div>
+                    <br/>
+                    <div class="btn-contact">
+                    <button class="button-right">Send</button></div>
+                </form>
             </div>
         </div>
-        <div class="right">
-            <div class="social-icons-footer">
-                <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
-                <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-            </div>
-        </div></div>
-    </footer>
+        
+    </div>
+
+    <!-- Nova seção horizontal -->
+    <div class="horizontal-section">
+        <div class="vertical-text">
+            <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
+            <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
+            <p>© 2024 studio forja. All rights reserved.</p>
+           
+        </div>
+     
+        <div class="icon-group">
+               <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://forja.works/"><i class="bi bi-globe2"></i> forja.works</a>
+         
+        </div>
+        <div class="button-container">
+           <a href="https://www.instagram.com/studio_forja/"> <button class="cta">
+                <span class="hover-underline-animation"> FOLLOW US </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                  ></path>
+                </svg>
+              </button></a>
+              
+        </div>
+    </div>
+
     <script src="js/nav.js"></script>
     <a href="#" class="scroll-to-top">
         <img src="assets/arrow.png" alt="Seta para cima">
-      </a>
-      
-      <script src="js/top.js"></script>
+    </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const divRight = document.querySelector('.div-right');
+            setTimeout(() => {
+                divRight.classList.add('animate');
+            }, 500); // Adiciona um pequeno atraso para suavizar a animação
+        });
+        </script>
+        <script>
+            document.addEventListener("mousemove", function(event) {
+                const background = document.querySelector('.background-image');
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                const offsetX = (mouseX / windowWidth) * 20 - 10; // Ajuste a intensidade do movimento horizontal
+                const offsetY = (mouseY / windowHeight) * 20 - 10; // Ajuste a intensidade do movimento vertical
+            
+                background.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            });
+            </script>
+            
+    <script src="js/top.js"></script>
 </body>
 </html>
