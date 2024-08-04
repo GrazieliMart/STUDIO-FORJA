@@ -37,6 +37,171 @@
   margin-bottom: 150px;
  
 }
+ 
+.horizontal-section {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+   padding-top: 20px;
+   padding-bottom: 20px;
+    background-color: #131212;
+}
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    align-items: flex-start;
+}
+.vertical-text a{
+    text-decoration: none;
+    color: #888888;
+    font-weight:900;
+}
+.vertical-text p{
+    color: #fff;
+}
+.vertical-text a:hover{
+
+    text-decoration: underline;
+
+}
+       .icon-group {
+      margin-top: 100px;
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-around;
+    width: 10px;
+}
+        .icon-group i {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.2s;
+        }
+        .icon-group a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            line-height: 100px;
+            font-size: 15px;
+            margin: 0 10px;
+        }
+        .icon-group a:hover{
+            color: rgb(128, 128, 128);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .icon-group i:hover{
+            color: rgb(141, 141, 141);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .button-container {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right:150px;
+        }
+       
+        
+.button-right {
+    background-color: gold;
+    padding: 15px;
+    cursor: pointer;
+    margin-right: -0px;
+    width: 100px;
+    border: none;
+    transition: 0.2s;
+}
+.button-right:hover{
+    color: #fff;
+    transition: 0.2s;
+    background-color: rgb(141, 141, 141);
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@font-face {
+  font-family: 'GoshaSans';
+  src: url('fonts/GoshaSans-Bold.otf') format('opentype');
+  
+}
+.div-right {
+   
+    transform: translateY(-100px);
+    transition: all 1.0s ease-out;
+}
+
+.div-right.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+.btn-contact {
+    justify-content: end;
+    display: flex;
+}
+.div-right {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(-100px); /* Começa deslocado para cima */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave para ambas as propriedades */
+}
+
+.div-right.animate {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
 @media (max-width: 1500px) {
   .mobile-space {
         margin-top: 100px;
@@ -114,8 +279,8 @@
     <h1>Recents Projects</h1>
       </div>
   <div class="containerwork">
-    <div class="item">
-      <a href="cooler.html">
+    <a href="axis.html"><div class="item">
+      
       <img src="assets/projects (1).png" alt="Imagem 1">
   
   
@@ -124,12 +289,12 @@
         <h1>Axis Ballymount</h1>
         <p>Fit Out • Joinery</p>
       </div></div>
-     </a>
-    </div>
+   
+    </div></a>
   
   
     <div class="item">
-      <a href="aspas.html">
+      <a href="pit-bross.html">
       <img src="assets/slide (8).png" alt="Imagem 2">
       
       <div class="overlay1">  
@@ -142,7 +307,7 @@
   
   
     <div class="item">
-      <a href="kidy.html">
+      <a href="back-page.html">
       <img src="assets/projects (3).png" alt="Imagem 3">
       <div class="overlay1" style="background-color: rgba(255, 126, 5, 0.671);">
      
@@ -159,7 +324,7 @@
   </div>
   <div class="containerwork">
     <div class="item">
-      <a href="projects-bog.html">
+      <a href="festival.html">
       <img src="assets/slide (10).png" alt="Imagem 1">
   
   
@@ -173,7 +338,7 @@
   
   
     <div class="item">
-      <a href="projects-elg-bgs.html">
+      <a href="loot.html">
       <img src="assets/projects (5).png" alt="Imagem 2">
       
       <div class="overlay1" style="background-color: rgba(5, 22, 255, 0.671);">  
@@ -185,7 +350,7 @@
     </div>
 
     <div class="item">
-      <a href="projects-elg-bgs.html">
+      <a href="rockshore.html">
       <img src="assets/slide (9).png" alt="Imagem 2">
       
       <div class="overlay1" style="background-color: rgba(5, 176, 255, 0.671);">  
@@ -200,7 +365,7 @@
   </div>
   <div class="containerwork">
     <div class="item">
-      <a href="projects-bog.html">
+      <a href="charlie.html">
       <img src="assets/projects (2).png" alt="Imagem 1" class="zoom-image">
   
   
@@ -214,7 +379,7 @@
   
   
     <div class="item">
-      <a href="projects-elg-bgs.html">
+      <a href="ketel.html">
       <img src="assets/slide (11).png" alt="Imagem 2">
       
       <div class="overlay1" style="background-color: rgba(255, 5, 5, 0.671);">  
@@ -226,7 +391,7 @@
     </div>
 
     <div class="item">
-      <a href="projects-elg-bgs.html">
+      <a href="handsome.html">
       <img src="assets/projects (4).png" alt="Imagem 2">
       
       <div class="overlay1" style="background-color: rgba(0, 179, 24, 0.671);">  
@@ -249,50 +414,41 @@
 
 
 
+ <div class="horizontal-section">
+  <div class="vertical-text">
+      <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
+      <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
+      <p>© 2024 studio forja. All rights reserved.</p>
+     
+  </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305034.63343353005!2d-6.575335129359489!3d53.32386586707275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Irlanda!5e0!3m2!1spt-BR!2sbr!4v1721224321511!5m2!1spt-BR!2sbr" width="100%" height="200" style="border: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<footer class="footer">
-  <div class="footer-background">
-      <img src="assets/texture.png" alt="Background Texture">
+  <div class="icon-group">
+         <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
+<a href="https://forja.works/"><i class="bi bi-globe2"></i> forja.works</a>
+   
   </div>
-  <div class="footer-div">
-      <div class="left-footer"><img src="assets/logo-design.png" alt=""></div>
-      <div class="center-footer"><p>" I've always been drawn to the overlap between design and construction. I enjoy each aspect, and love building projects from start to finish, for clients all over the country. "  - <span>Caio Pazini, Owner</span></p></div>
-      <div class="right-footer">
-          <ul class="vertical-menu">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="projects.html">PROJECTS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-      </div>
+  <div class="button-container">
+     <a href="https://www.instagram.com/studio_forja/"> <button class="cta">
+          <span class="hover-underline-animation"> FOLLOW US </span>
+          <svg
+            id="arrow-horizontal"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="10"
+            viewBox="0 0 46 16"
+          >
+            <path
+              id="Path_10"
+              data-name="Path 10"
+              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+              transform="translate(30)"
+            ></path>
+          </svg>
+        </button></a>
+        
   </div>
-  <div class="footer-bottom-div">
-      <div class="left">
-          <ul>
-              <li>© 2024 studio forja. All rights reserved.</li>
-              <br>
-          </ul>
-      </div>
-      <div class="center">
-          <div class="ggdigital">
-              <div class="marginp"><p>Desenvolvido por</p></div>
-              <span>
-                  <a href="https://marketinggdigital.com/">
-                      <img src="assets/ggdigital.webp" alt="">
-                  </a>
-              </span>
-          </div>
-      </div>
-      <div class="right">
-          <div class="social-icons-footer">
-              <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
-              <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-          </div>
-      </div>
-  </div>
-</footer>
-
+</div>
 
 
 

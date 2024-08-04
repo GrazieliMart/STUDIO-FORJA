@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>Studio Forja I About Us</title>
     <style>
+    
     @media (max-width: 900px) {}  
         .full-width-section {
             position: relative;
@@ -218,6 +219,7 @@ text-decoration: underline;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: -200px;
     z-index: 1;
     width: inherit;
     padding: 0px;
@@ -524,11 +526,10 @@ text-decoration: underline;
     
 }
 .about-div p {
-  font-family: monospace;
+    font-family: monospace;
     font-weight: 200;
-    color: #292825;
+    color: #999999;
     font-size: 17px;
-    
 }
 .about-div hr {
     background-color: #ffde04;
@@ -678,10 +679,25 @@ text-decoration: underline;
     margin-bottom: 150px;
 }
 @media (max-width: 900px) {
+    .button-right {
+    background-color: gold;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+    margin-right: -0px;
+    margin-top: 350%;
+    position: relative;
+    width: 150px;
+    border: none;
+    transition: 0.2s;
+}
     .about-div {
     position: relative;
     width: 100%;
     overflow: hidden;
+}
+#mobile-dev{
+    display: none;
 }
 .about-div h1 {
     font-family: 'GoshaSans', sans-serif;
@@ -702,20 +718,20 @@ text-decoration: underline;
     font-size: 12px;
 }
 .about-div {
-    position: relative;
-    width: 98%;
-    overflow: hidden;
-    background-color: #f0f0f000;
-    color: rgb(0, 0, 0);
-    margin-top: 15px;
-    margin-left: 20px;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 550px;
-}
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background-color: #fbfbfb;
+        color: rgb(0, 0, 0);
+        margin-top: 15px;
+        margin-left: 0px;
+        padding: 0px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 550px;
+    }
 .background-video {
     position: absolute;
     top: 0;
@@ -753,7 +769,8 @@ text-decoration: underline;
 .mobile-space {
     margin-top: 100px;
     display: flow;
-    margin-left: 10px;
+    margin-left: 0px;
+    padding: 0px;
     text-align: left;
     margin-bottom: 150px;
 }
@@ -821,16 +838,47 @@ text-decoration: underline;
         justify-content: space-between;
     }
     .horizontal-section {
-    position: fixed;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    color: #fff;
-    width: 100%;
-    padding: 7px;
-    background-color: #000000;
+        position: relative;
+        display: grid;
+        margin-bottom: -200px;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        margin-left: 0%;
+        color: #fff;
+        padding-top: 20px;
+        width: 100%;
+        padding: 0px;
+        background-color: #f0f0f0;
+    }
+    .horizontal-section p{
+        color: #555;
+    }
+    #info {
+        position: relative;
+        opacity: 1;
+        transform: none;
+        transition: all 1s ease-in-out;
+    }
+
+#info.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
+.navbar-nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'GoshaSans', sans-serif;
+    font-size: 14px;
+    padding-top: 30px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+
+
 .icon-group a {
     text-decoration: none;
     color: #ffde04;
@@ -895,6 +943,12 @@ text-decoration: underline;
     z-index: 2;
     bottom: 0px;
     margin-left: 250px;
+}
+.align-hero-div {
+    width: 100%;
+    padding-top: 40px;
+    padding: 30px;
+    justify-content: center;
 }
 }
     </style>
@@ -1049,47 +1103,67 @@ text-decoration: underline;
         <img src="assets/companys (11).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (12).png" alt="Image 1" class="animate-img">
     </div>
-    <div class="studio-empresas">
+    <div class="studio-empresas" id="mobile-dev">
         <img src="assets/companys (13).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (14).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (15).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (16).png" alt="Image 1" class="animate-img">
     </div>
-    <div class="studio-empresas">
+    <div class="studio-empresas"  id="mobile-dev">
         <img src="assets/companys (17).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (18).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (19).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (20).png" alt="Image 1" class="animate-img">
     </div>
-    <div class="studio-empresas">
+    <div class="studio-empresas"  id="mobile-dev">
         <img src="assets/companys (21).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (2).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (23).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (35).png" alt="Image 1" class="animate-img">
     </div>
-    <div class="studio-empresas">
+    <div class="studio-empresas"  id="mobile-dev">
         <img src="assets/companys (25).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (26).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (27).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (28).png" alt="Image 1" class="animate-img">
     </div>
 </div>
-<div class="text-image-div" id="info">
-   
+
+<div class="text-image-div" id="info" style="margin-right: 0px;">
     <div class="image">
         <div class="carousel1">
             <img src="assets/about2.png" alt="Image 1">
-          
         </div>
     </div>
-     <div class="text">
+    <div class="text">
         <h2>Contact Us</h2>
         <p>Studio Forja it's <b>ready</b> to project your new idea! <br><br>Design, Rends, Conception and with <b>FORJA WORKS</b>, construction and installation!</p>
         <div class="carousel-nav">
-            <a href="contact.html"><button class="carousel-button" id="contact-div" data-slide="1" style="width: 150px; font-size: 20px;">Let's Start!</button></a> </div>
+            <a href="contact.html"><button class="carousel-button" id="contact-div" data-slide="1" style="width: 150px; font-size: 20px;">Let's Start!</button></a>
+        </div>
         <br><br>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var infoDiv = document.getElementById("info");
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    infoDiv.classList.add("visible");
+                    observer.unobserve(infoDiv); // Parar de observar após a animação
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(infoDiv);
+    });
+</script>
+
+
+
 <script>document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".animate-img");
 
@@ -1109,6 +1183,8 @@ text-decoration: underline;
 </script>
 
 
+  
+  
     <!-- Nova seção horizontal -->
     <div class="horizontal-section">
         <div class="vertical-text">

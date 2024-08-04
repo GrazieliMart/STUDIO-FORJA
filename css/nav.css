@@ -226,6 +226,24 @@ body {
       transform: none;
      
     }
+    .overlay-content h2 {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      font-weight: 400;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      margin-left: 5%;
+  }
+    .navbar-nav {
+      float: left;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: static;
+      left: 25%;
+      transform: translateX(-50%);
+  }
     .navbar-brand {
       margin-left: 20px;
       display: none;
@@ -274,66 +292,110 @@ body {
         cursor: pointer;
     }
   
-  }
-  .video-container {
+  }.video-container {
     position: relative;
     width: 100%;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    height: 900px;
+    height: 950px;
+    transition: height 0.1s ease; /* Transição suave para alteração de altura */
 }
 
 .video-container video {
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  object-fit: cover;
+}
+/* Define a animação de surgir da esquerda para a direita */
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
 
+/* Adiciona a animação com um atraso de 0.3s */
 .overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0); /* semi-transparent background for better readability */
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0);
+  animation: slideInFromLeft 2s ease-out 0.3s forwards; /* Animação de 1s com atraso de 0.3s */
 }
 
- .overlay-content p {
-    margin: 20px 0;
-    font-size: 35px;
-    text-align: center;
-}
-.overlay-content h1{
-    font-size: 75PX;
-    text-align: center;
-    margin: 10px 0;
+.overlay-content p {
+  margin: 10px 0;
+  font-weight: 100;
+  font-family: monospace;
+  font-size: 40px;
+  margin-left: 5%;
+  text-align: left;
 }
 
+.overlay-content h1 {
+  font-size: 105px;
+  line-height: 65px;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #FFDE04;
+  margin-top: 15px;
+  margin-left: 5%;
+}
+
+.overlay-content h2 {
+  font-size: 45px;
+  line-height: 35px;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-left: 5%;
+}
+
+.overlay-content button {
+    margin-left: 5%;
+}
 
 @media (max-width: 1100px) {
-  .video-container video {
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    object-fit: cover;
-}
   .overlay-content h1 {
-    font-size: 25PX;
+    font-size: 20PX;
     text-align: center;
-    margin: 10px 0;
+    margin: 0px 20px;
+}
+.overlay-content h2 {
+  font-size: 25px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: 0;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5%;
 }
 .overlay-content p {
-  margin: 20px 0;
-  font-size: 16px;
+  margin: 20px 20px;
+  font-size: 10px;
+  text-align: center;
+}
+.overlay-content p {
+  margin: 0px 20px;
+  font-size: 12px;
+  margin-bottom: -20px;
   text-align: center;
 }
 .video-container {

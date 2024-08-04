@@ -229,7 +229,7 @@
   
 }
 .div-right {
-    opacity: 0;
+   
     transform: translateY(-100px);
     transition: all 1.0s ease-out;
 }
@@ -242,6 +242,17 @@
     justify-content: end;
     display: flex;
 }
+.div-right {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(-100px); /* Começa deslocado para cima */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave para ambas as propriedades */
+}
+
+.div-right.animate {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
 @media (max-width: 1500px) {
     .navbar {
         overflow: hidden;
@@ -403,10 +414,22 @@
                     <div class="g-recaptcha" data-sitekey="6LfvXuApAAAAAGpafYyAnTgwlnn6DS3Eq6bLZWHv"></div>
                     <br/>
                     <div class="btn-contact">
-                    <button class="button-right">Send</button></div>
+                        <button class="button-right">Send</button>
+                    </div>
                 </form>
             </div>
         </div>
+        
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const divRight = document.querySelector('.div-right');
+        setTimeout(() => {
+            divRight.classList.add('animate');
+        }, 500); // Tempo antes de adicionar a classe animate
+    });
+    </script>
+        
         
     </div>
 
@@ -451,14 +474,7 @@
     <a href="#" class="scroll-to-top">
         <img src="assets/arrow.png" alt="Seta para cima">
     </a>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const divRight = document.querySelector('.div-right');
-            setTimeout(() => {
-                divRight.classList.add('animate');
-            }, 500); // Adiciona um pequeno atraso para suavizar a animação
-        });
-        </script>
+   
         <script>
             document.addEventListener("mousemove", function(event) {
                 const background = document.querySelector('.background-image');
