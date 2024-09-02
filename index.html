@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-    <title>Studio Forja</title>
+    <title>Studio Forja I Comercial Interior Design</title>
     <style>
         @media (max-width: 900px) {
             
@@ -157,6 +158,7 @@
 
 .navbar-nav li a {
     display: block;
+    letter-spacing: 2px;
     color: #000000;
     text-align: center;
     padding: 14px 16px;
@@ -1004,7 +1006,9 @@ form span h1{
 .navbar.scrolled {
     background-color: #000000;
 }
-
+.vertical-text img{
+    height: 200px;
+}
 .navbar-nav li a {
     display: block;
     color: #000000;
@@ -1018,6 +1022,9 @@ form span h1{
 }
 
 .navbar.scrolled .navbar-nav li a {
+    color: #ffffff;
+}
+.navbar.scrolled .navbar-nav li a:hover {
     color: #ffffff;
 }
 
@@ -1040,40 +1047,44 @@ form span h1{
 }
 
 .navbar.scrolled .navbar-brand img {
-    content: url('assets/logo.png');
+    content: url('assets/logo2.png');
 }
-
 .navbar.scrolled {
-    background-color: #000000;
-}
+        background-color: #00000003;
+        box-shadow: 0px 10px 10px #00000012;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
 
 .social-icons {
     float: right;
     margin-right: 70px;
     padding-top: 15px;
-}
-.navbar-nav li a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif;
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-.navbar-nav li a:hover {
-    display: block;
-    color: #7a7a7a;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif;
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: 0.2s;
-}
+}    .navbar-nav li a {
+        display: block;
+        color: #ffffff;
+        font-weight: 100;
+        text-align: center;
+        padding: 14px 16px;
+        font-family: math;
+        font-size: 14px;
+        padding-top: 35px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    .navbar-nav li a:hover {
+        display: block;
+        color: #7a7a7a;
+        text-align: center;
+        color: #fff;
+        padding: 14px 16px;
+        /* font-family: 'GoshaSans', sans-serif; */
+        font-size: 14px;
+        padding-top: 30px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
 .navbar .social-icons a i {
     background-color: #ffde0400;
     color: #ffffff;
@@ -1114,16 +1125,16 @@ form span h1{
             background-color: #f5f5f5;
         }
         .horizontal-section {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1;
-            width: 100%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background-color: #e0e0e0;
-        }
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #c4c4c4;
+    }
         .vertical-text {
             display: flex;
             flex-direction: column;
@@ -1168,6 +1179,42 @@ form span h1{
             cursor: pointer;
             transition: 0.2s;
         }
+        .container3 {
+        background-color: #e1e1e1;
+        padding: 20px;
+        margin: 0px 20PX 0px 20px;
+        max-width: 100%;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .container3 .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container3 .header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .container3 .header p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .container3 .header button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff; /* Azul para o botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         .icon-group i:hover {
             color: rgb(141, 141, 141);
             cursor: pointer;
@@ -1181,18 +1228,19 @@ form span h1{
             margin-right: 150px;
         }
         .button-right {
-            background-color: gold;
-            padding: 15px;
-            cursor: pointer;
-            margin-right: 0;
-            width: 100px;
-            border: none;
-            transition: 0.2s;
-        }
+        background-color: #078a74;
+        padding: 15px;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 0;
+        width: 100px;
+        border: none;
+        transition: 0.2s;
+    }
         .button-right:hover {
-            color: #464646;
+            color: #078a74;
             transition: 0.2s;
-            background-color: rgb(141, 141, 141);
+            background-color: rgb(226, 226, 226);
         }
         .cta {
             border: none;
@@ -1310,6 +1358,35 @@ form span h1{
             text-align: center;
             perspective: 1000px; /* Adiciona perspectiva para o efeito 3D */
         }
+        
+        .image-slider-google img {
+        width: 120px;
+        height: 100px;
+        margin-top: 50px;
+        margin-right: 150px;
+        display: inline-block;
+        animation: slide-right 25s linear infinite;
+    }
+  .overlay-content  h1 {
+            font-size: 5rem;
+            color: #ffffff;
+            white-space: nowrap;
+            opacity: 1; /* Inicialmente invisível */
+        }
+.image-slider-google {
+    background-color: #f5f5f5;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0px 0;
+}
+@keyframes slide-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
         .button-3d {
             display: inline-block;
             width: 100px;
@@ -1454,14 +1531,7 @@ margin-left: 5px;
     align-items: center;
 }
 
-.item {
-    display: grid;
-    justify-content: center;
-    width: 200px;
-    align-items: center;
-    margin-right: 20px; /* Espaçamento entre os itens */
-    flex-shrink: 0; /* Impede que os itens encolham */
-}
+
 
 .item-image {
     width: 80px; /* Ajuste o tamanho conforme necessário */
@@ -1480,6 +1550,15 @@ transform: scale(1.1);
     display: flex;
     flex-direction: column;
    
+}
+.contact-buttom {
+    padding: 10px;
+    background-color: #00000000;
+    border-radius: 0px;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 .item-content h1 {
@@ -1508,53 +1587,109 @@ transform: scale(1.1);
 .text-content button:hover {
     background-color: #cccccc;
 }
-.text-container h1{
-    color: #000000;
-    margin-bottom: -70px;
+.text-container h1 {
+        color: #000000;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: -90px;
+    }
 
-}
 .text-container p{
     font-size: 20px;
     font-family: monospace;
     color: #858585;
+}.image-gallery {
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 50px;
+    position: relative; /* Adiciona o contexto de posicionamento */
 }
-.image-gallery {
-    background-color: #f5f5f5;
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .image-gallery img {
-            width: 90%;
-            border: 2px solid #dddddd00;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-        .image-gallery img:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-        .text-container{
 
+.image-gallery a {
+    position: relative; /* Faz o overlay se posicionar relativo ao link */
+    display: block;
+    width: 100%; /* Garante que o link ocupe toda a largura da imagem */
+}
+
+.image-gallery img {
+        width: 95%;
+        border: 2px solid #dddddd00;
+        margin: 20px 0px 0px 20px;
+        /* transition: transform 0.3s; */
+    }
+
+.image-gallery img:hover {
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    cursor: pointer;
+}
+
+.image-gallery .over-img {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Posiciona o conteúdo na parte inferior */
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    padding: 10px; /* Espaçamento interno */
+    z-index: 2; /* Garantir que o overlay esteja acima da imagem */
+    transform: translateY(100%); /* Inicialmente fora da vista */
+}
+
+.gallery-item:hover .over-img {
+    opacity: 1; /* Torna o overlay visível */
+    transform: translateY(0); /* Move o overlay para dentro da vista */
+}
+
+.overlay-text {
+    text-align: center;
+}
+
+.button {
+    background-color: #007bff; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+        .text-container{
+            font-family: 'futura-pt', sans-serif;
           margin-top: -5px;
             padding: 50px;
             background-color: #f5f5f5;
         }
-        .text-container hr{
-            color: #ffde04;
-            height: 2px;
-            margin-top: 5%;
-            width: 50%;
-            background-color: #ffde04;
-            border: none;
-            margin-left: -20%;
-        }
-        .container {
-    display: flex;
-    padding-top: 20px;
-    width: 100%; /* Ajuste conforme necessário */
-    height: 700px; /* Ajuste conforme necessário */
-}
+        .text-container hr {
+        color: #000000;
+        height: 2px;
+        margin-top: 5%;
+        width: 50%;
+        background-color: #cdcdcd;
+        border: none;
+        margin-left: -20%;
+    }
+    .container {
+        display: flex;
+        padding-top: 50px;
+        width: 100%;
+        height: auto;
+    }
 
 .left-div, .right-div {
     flex: 1; /* Faz as divs ocuparem espaço igual */
@@ -1564,10 +1699,9 @@ transform: scale(1.1);
 .left-div {
   margin-left: 150px;
 }
-
 .right-div {
-    /* Estilos específicos para a div à direita, se necessário */
-}
+        margin-top: 100px;
+    }
 .btn-contact {
     justify-content: flex-start;
     display: flex;
@@ -1587,17 +1721,18 @@ transform: scale(1.1);
     justify-content: space-around;
     margin-bottom: 10px;
 }
-form h1{
-    font-size: 40px;
-}
+form h1 {
+        font-size: 30px;
+        color: #bfbfbf;
+    }
 form{
     margin-top: -150px;
 }
-form span h1{
-    margin-bottom: -5px;
-    font-size: 65px;
-    color: #ffde04;
-}
+form span h1 {
+        margin-bottom: -5px;
+        font-size: 65px;
+        color: #000000;
+    }
 .faixa img{
     width: 100%;
 }
@@ -1607,14 +1742,47 @@ form span h1{
 }
 
 
+.texttittle img {
+    height: 110px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
 
+.texttittle {
+    display: flex;
+    justify-content: center;
+    color: #0e0912;
+    margin-bottom: 50px;
+}
+.texttittle span {
+    color: #005f8f;
+}
 
+.texttittle h1 {
+    font-family: math;
+    font-weight: 900;
+    color: #000000;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+.button-right {
+    background-color: #005f8f;
+    padding: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: -0px;
+    width: 100%;
+    border: none;
+    transition: 0.2s;
+}
 
-
-
-
-
-
+.button-right:hover {
+    color: #fff;
+    transition: 0.2s;
+    background-color: rgb(141, 141, 141);
+}
 
         }
    
@@ -1634,8 +1802,10 @@ form span h1{
     <script src="js/ancoras.js"></script>
     <div class="overlaytop"></div>
     <script src="js/nav.js"></script>
+    <header> 
     <nav class="navbar">
-        <a class="navbar-brand" href="index.html"><img src="assets/logo3.png" alt="Logo"></a>
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="Logo"></a>
         <div class="navbar-toggler">
             <i class="bi bi-list menu-icon"></i>
             <i class="bi bi-x menu-icon d-none"></i>
@@ -1649,9 +1819,9 @@ form span h1{
         <div class="social-icons">
             <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
             <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-            <a href="contact.html"><button class="contact-buttom" style="background-color: #ffde04;">Contact Us</button></a>
+            <a href="contact.html"><button class="contact-buttom" >Contact Us</button></a>
         </div>
-    </nav>
+    </nav></header>
     <script>window.addEventListener('scroll', function() {
         var navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
@@ -1663,31 +1833,159 @@ form span h1{
     </script>
     <script src="js/nav.js"></script>
     <div class="overlay-nav d-none"></div>
-    <div class="video-container" id="videoContainer">
-        <video src="assets/video-intro.mp4" autoplay muted loop playsinline></video>
+    <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-images">
+            <img src="assets/image (1).jpg" alt="Image 1">
+            <img src="assets/image (2).jpg" alt="Image 1">
+            <img src="assets/image (3).jpg" alt="Image 1">
+            <img src="assets/image (4).jpg" alt="Image 1">
+            <img src="assets/image (5).jpg" alt="Image 1">
+            <img src="assets/image (6).jpg" alt="Image 1">
+            <img src="assets/image (7).jpg" alt="Image 1">
+            <img src="assets/image (8).jpg" alt="Image 1">
+            <img src="assets/image (9).jpg" alt="Image 1">
+        </div>
         <div class="overlay-content">
-            <p>Design | 3D Projects | Renders and More +</p>
             <h1>STUDIO FORJA</h1>
-            <h2>WE DESIGN ALL YOUR <br>PROJECT IDEA</h2>
-            <br><br>
+       
+    
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Seleciona o elemento h1
+                const h1 = document.querySelector('h1');
+                
+                // Define a animação
+                gsap.from(h1, {
+                    duration: 2.5, // Duração da animação
+                    x: -200, // Inicia fora da tela, à esquerda
+                    opacity: 0, // Começa invisível
+                    ease: 'power3.out', // Efeito de suavização
+                    stagger: 2.0, // Adiciona um pequeno atraso entre cada letra
+                    onComplete: () => {
+                        console.log('Animação concluída');
+                    }
+                });
+            });
+        </script>
+            
             <br>
+            <!-- Navegação do Carrossel -->
+            <div class="carousel-navigation">
+                <button class="carousel-prev">&#10094;</button>
+                <button class="carousel-next">&#10095;</button>
+            </div>
+            <!-- Texto associado a cada imagem -->
+            <div class="carousel-texts">
+                <p class="carousel-text active">INTERIOR DESIGN ACHARA DUBLIN, BAR AND RESTAURANT, DUBLIN</p>
+                <p class="carousel-text"> KIOSK WE DESIGN AND BUILD FOR GAUCHOS AÇAI AT THE DUBLIN SHOPPING, DUBLIN</p>
+                <p class="carousel-text">BEAUTIFUL SET WE DESIGN AND BUILD FOR MILLER TANNER ASSOCIATES</p>
+                <p class="carousel-text">BAR SPACE AND EXTERIOR FACADE WE DEVELOP FOR BACK PAGE, DUBLIN</p>
+                <p class="carousel-text">NEW HIGH TABLES, INCLUDING LEGS AND TOPS, RASCALS BREWING COMPANY</p>
+                <p class="carousel-text">ENTIRE DESIGN IN 3D AND RENDER FOR THE CHARLIE'S RESTAURANT</p>
+                <p class="carousel-text">DETAILED WOODWORK AND ECO-FRINDLY OUTODDOR TABLES</p>
+                <p class="carousel-text">ENTIRE DESIGN IN 3D AND RENDER FOR THE CHARLIE'S RESTAURANT</p>
+                <p class="carousel-text active">INTERIOR DESIGN ACHARA DUBLIN, BAR AND RESTAURANT, DUBLIN</p>
+            </div>
         </div>
     </div>
     
-    <script>window.addEventListener('scroll', function() {
-        const videoContainer = document.querySelector('.video-container');
-        const scrollPosition = window.scrollY;
+<script>const images = document.querySelectorAll('.carousel-images img');
+    const texts = document.querySelectorAll('.carousel-text');
+    let currentIndex = 0;
+    let isTransitioning = false;
     
-        // Determine the initial height based on the window width
-        const initialHeight = window.innerWidth <= 768 ? 400 : 950;
-        
-        // Calculate the new height, ensuring it does not go below 0
-        const newHeight = Math.max(0, initialHeight - scrollPosition);
-        videoContainer.style.height = `${newHeight}px`;
+    function showSlide(index) {
+        if (isTransitioning) return;
+    
+        isTransitioning = true;
+    
+        // Remove a classe 'active' de todas as imagens e textos
+        images.forEach((img) => {
+            img.classList.remove('active');
+        });
+    
+        texts.forEach((text, i) => {
+            text.classList.toggle('active', i === index);
+        });
+    
+        // Adiciona a classe 'active' apenas para a imagem atual
+        images[index].classList.add('active');
+    
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 1500); // Duração da transição no CSS
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showSlide(currentIndex);
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showSlide(currentIndex);
+    }
+    
+    // Mudar imagem a cada 3 segundos
+    let autoSlide = setInterval(nextSlide, 3000);
+    
+    // Adicionando eventos de click para navegação manual
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
     });
     
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+    
+    // Resetar o intervalo de autoSlide ao interagir manualmente
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+    
+    // Adicionando funcionalidade de swipe (arrastar)
+    let startX;
+    let isDragging = false;
+    
+    document.querySelector('.carousel-images').addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+    
+    document.querySelector('.carousel-images').addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+    
+        let moveX = e.touches[0].clientX;
+        let difference = startX - moveX;
+    
+        if (Math.abs(difference) > 50) { // Verifica se o arrasto é suficiente
+            if (difference > 0) { // swipe para a esquerda
+                nextSlide();
+            } else { // swipe para a direita
+                prevSlide();
+            }
+            resetAutoSlide();
+            isDragging = false;
+        }
+    });
+    
+    document.querySelector('.carousel-images').addEventListener('touchend', () => {
+        isDragging = false;
+    });
+    
+    // Inicializa o carrossel com a primeira imagem e texto
+    showSlide(currentIndex);
+    
+    
+    
+    
     </script>
-    <div class="container-3d">
+  <!--  <div class="container-3d">
         <div class="left-3d">
             <h1>STUDIO FORJA</h1>
             <hr>
@@ -1720,15 +2018,15 @@ form span h1{
                 <a href="https://www.instagram.com/forja_works/"> <button class="button-right" style="width: 150px; font-weight: 500;">VISIT INSTAGRAM</button></a>
              </div>
         </div>
-    </div>
-    <div id="video-overlay" class="video-overlay">
+    </div>-->
+    <!-- <div id="video-overlay" class="video-overlay">
         <video id="fullscreen-video" muted controls loop autoplay>
             <source src="assets/ketel.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <button id="close-video" class="close-video">X</button>
-    </div>
-    <div class="horizontal-wrapper">
+    </div>-->
+  <!--  <div class="horizontal-wrapper">
         <div class="item">
             <a href="contact.html"><div class="img">
            <img src="assets/image1.png" alt="Imagem 1" class="item-image">
@@ -1761,92 +2059,285 @@ form span h1{
             </div>
         </div>
        
-    </div>
+    </div>-->
     
-<div class="faixa"><a href="charlie.html">
+<!--<div class="faixa"><a href="charlie.html">
     <img src="assets/back.jpg" alt=""></a>
+</div>-->
+
+<div class="image-slider-google">
+    <img src="assets/black (1).png" alt="Imagem 1">
+    <img src="assets/black (2).png" alt="Imagem 1"> 
+    <img src="assets/black (3).png" alt="Imagem 1">
+    <img src="assets/black (4).png" alt="Imagem 1"> 
+    <img src="assets/black (5).png" alt="Imagem 1">
+    <img src="assets/black (6).png" alt="Imagem 1">
+    <img src="assets/new (1).png" alt="Imagem 1">
+    <img src="assets/new (2).png" alt="Imagem 1"> 
+    <img src="assets/new (3).png" alt="Imagem 1">
+    <img src="assets/new (4).png" alt="Imagem 1"> 
+    <img src="assets/new (5).png" alt="Imagem 1">
+    <img src="assets/new (6).png" alt="Imagem 1">
+
+
+   
+
+   
 </div>
 
-<div class="text-container">
-    <p>More Projects</p>
-
-    <h1>Visit and See others Projects</h1>
-    <br><br>
-    <hr>
+<div class="mobile-space"> 
+    <div class="containerwork">
+      <div class="item">
+        <a href="charlie.html">
+        <img src="assets/image (1).jpg" alt="Imagem 1" class="zoom-image">
+    
+    
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+          <div class="text-overlay">
+          <h1>ACHARA DUBLIN</h1>
+          <p>Fit out • Interior Design</p>
+        </div></div>
+       </a>
       </div>
-<div class="image-gallery">
     
     
-   <a href="charlie.html"><img src="assets/p (1).png" alt="Image 4"></a> 
-   <a href="loot.html"> <img src="assets/p (2).png" alt="Image 5"></a>
-   <a href="axis.html"> <img src="assets/p (3).png" alt="Image 6"></a>
-    <a href="handsome.html"><img src="assets/p (4).png" alt="Image 6"></a>
+  
+      <div class="item">
+        <a href="handsome.html">
+        <img src="assets/projects (4).png" alt="Imagem 2">
+        
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+          <div class="text-overlay">
+            <h1>HandSome Burguer</h1>
+            <p>Project Design</p>
+        </div></div>
+        </a>
+      </div>
+    
+  
+    </div>
+  
+    <div class="containerwork">
+     
+    <div class="item">
+      <a href="back-page.html">
+      <img src="assets/projects (3).png" alt="Imagem 3">
+      <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">
+     
+      
+   <div class="text-overlay">
+        <h1>Black Page</h1>
+       <p>Exterior Design</p>
+      </div>
+      </div>
+  
+  
+     
+    </div></a>
+    
+     
+    <div class="item">
+      <a href="loot.html">
+      <img src="assets/projects (5).png" alt="Imagem 2">
+      
+      <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+       <div class="text-overlay">
+          <h1>LOOT Dublin</h1>
+          <p>Interior Design • Retail</p>
+      </div></div>
+     </a>
+    </div>
+      
+    </div>
+    
+  
+   
+    <div class="containerwork">
+      <a href="axis.html"><div class="item">
+        
+        <img src="assets/projects (1).png" alt="Imagem 1">
+    
+    
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.623);">  
+         <div class="text-overlay">
+          <h1>Axis Ballymount</h1>
+          <p>Fit Out • Joinery</p>
+        </div></div>
+     
+      </div></a>
+    
+    
+      <div class="item">
+        <a href="pit-bross.html">
+        <img src="assets/slide (8).png" alt="Imagem 2">
+        
+        <div class="overlay1">  
+         <div class="text-overlay">
+            <h1>Pit Bross</h1>
+            <p>TV/Sets</p>
+        </div></div>
+        </a>
+      </div>
+    
+    
+     
+      
+    </div>
+  
+    <!--<div class="containerwork">
+      <div class="item">
+        <a href="festival.html">
+        <img src="assets/slide (10).png" alt="Imagem 1">
+    
+    
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+         <div class="text-overlay">
+          <h1>St. Patrick’s Festival</h1>
+          <p>Events</p>
+        </div></div>
+       </a>
+      </div>
+    
+    
+  
+      <div class="item">
+        <a href="rockshore.html">
+        <img src="assets/slide (9).png" alt="Imagem 2">
+        
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+           <div class="text-overlay">
+            <h1>RockShore Design</h1>
+            <p>Brand Activation</p>
+        </div></div>
+      </a>
+      </div>
+    
+  
+    </div>-->
+  
+    <div class="containerwork">
+      <div class="item">
+        <a href="charlie.html">
+        <img src="assets/projects (2).png" alt="Imagem 1" class="zoom-image">
+    
+    
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+          <div class="text-overlay">
+          <h1>Charlie's Restaurant</h1>
+          <p>Fit out • Interior Design</p>
+        </div></div>
+       </a>
+      </div>
+    
+    
+      <div class="item">
+        <a href="ketel.html">
+        <img src="assets/slide (11).png" alt="Imagem 2">
+        
+        <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+         <div class="text-overlay">
+            <h1>Ketel One</h1>
+            <p>Brand Activation</p>
+        </div></div>
+       </a>
+      </div>
+  
+    
+    
+  
+    </div>
+  
+   
+  
+  
+  
+   </div>
+    
+    
+   <div class="image-slider-google">
+    <img src="assets/black (1).png" alt="Imagem 1">
+    <img src="assets/black (2).png" alt="Imagem 1"> 
+    <img src="assets/black (3).png" alt="Imagem 1">
+    <img src="assets/black (4).png" alt="Imagem 1"> 
+    <img src="assets/black (5).png" alt="Imagem 1">
+    <img src="assets/black (6).png" alt="Imagem 1">
+    <img src="assets/new (1).png" alt="Imagem 1">
+    <img src="assets/new (2).png" alt="Imagem 1"> 
+    <img src="assets/new (3).png" alt="Imagem 1">
+    <img src="assets/new (4).png" alt="Imagem 1"> 
+    <img src="assets/new (5).png" alt="Imagem 1">
+    <img src="assets/new (6).png" alt="Imagem 1">
+
+
+   
+
    
 </div>
 
 <div class="container">
     <div class="left-div">    <div class="login-box">
-        <form method="POST" name="contact-page" data-netlify="true" onSubmit="submit">
-            <div class="texttittle">
-                <span><h1>STUDIO FORJA.</h1></span>
-                <h1>Get in touch and let's get start</h1><br>
-            </div>
-            <div class="user-box">
-                <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+">
-                <label>Your Name</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
-                <label>Your Company Name</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="email" type="email">
-                <label>Email</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
-                <label>Your Role</label>
-            </div>
-            <div class="user-box">
-                <input required="" name="sobre-sua-empresa" type="text">
-                <label>About your Project</label>
-            </div>
-            <div class="g-recaptcha" data-sitekey="6LfvXuApAAAAAGpafYyAnTgwlnn6DS3Eq6bLZWHv"></div>
-            <br/>
-            <div class="btn-contact">
-                <button class="button-right">Send</button>
-            </div>
-        </form>
+    
+            <div class="login-box">
+                <form method="POST" name="contact-page" data-netlify="true" onSubmit="submit">
+                    <div class="texttittle">
+                        <img src="assets/favicon.png" alt="">
+                        <h1>Fill out the form bellow and <span>let's start your project!</span></h1><br>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Company Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="email" type="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="user-box">
+                        <input required="" name="nome-empresa" type="text" pattern="[A-Za-zÀ-ú\s]+">
+                        <label>Your Role</label>
+                    </div>
+                    <div class="user-box">
+                        <select required="" name="project-type" onchange="this.classList.toggle('open')">
+                            <option value="" disabled selected>Select Project Type</option>
+                            <option value="interior-design">Interior Design</option>
+                            <option value="exterior-design">Exterior Design</option>
+                            <option value="retail">Retail</option>
+                            <option value="tv-sets">TV/Sets</option>
+                            <option value="bespoke-projects">Bespoke Projects</option>
+                            <option value="on-wheels">On Wheels</option>
+                            <option value="events-design">Events Design</option>
+                            <option value="other">Other</option>
+                            
+                        </select>
+                      </div>
+                      
+                    <div class="user-box">
+                        <input required="" name="sobre-sua-empresa" type="text">
+                        <label>About your Project</label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LfvXuApAAAAAGpafYyAnTgwlnn6DS3Eq6bLZWHv"></div>
+                    <br/>
+                    <div class="btn-contact">
+                        <button class="button-right">Send</button>
+                    </div>
+                </form>
+            
+        </div>
     </div> </div>
     <div class="right-div">
-        <div class="div-empresas-studio">
-        <div class="studio-empresas">
-            <img src="assets/black (1).png" alt="Image 1" class="animate-img">
-            <img src="assets/companys (22).png" alt="Image 1" class="animate-img">
-            <img src="assets/companys (3).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (2).png" alt="Image 1" class="animate-img">
-        </div>
-        <div class="studio-empresas">
-            <img src="assets/black (3).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (4).png" alt="Image 1" class="animate-img">
-            <img src="assets/companys (7).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (5).png" alt="Image 1" class="animate-img">
-        </div>
-        <div class="studio-empresas">
-            <img src="assets/companys (9).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (6).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (7).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (8).png" alt="Image 1" class="animate-img">
-        </div>
-        <div class="studio-empresas" id="mobile-dev">
-            <img src="assets/black (9).png" alt="Image 1" class="animate-img">
-            <img src="assets/black (10).png" alt="Image 1" class="animate-img">
-            <img src="assets/companys (15).png" alt="Image 1" class="animate-img">
-            <img src="assets/companys (16).png" alt="Image 1" class="animate-img">
-        </div></div>
-</div></div>
+        <video src="assets/form.mp4" autoplay loop muted></video>
+       </div>
+</div>
+
+</div>
 
 <div class="horizontal-section">
+    <div class="vertical-text">
+      <img src="assets/logo.png" alt="">       
+    </div>
     <div class="vertical-text">
         <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
         <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
@@ -1862,7 +2353,6 @@ form span h1{
     <div class="icon-group">
            <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
         <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-  <a href="https://forja.works/"><i class="bi bi-globe2"></i> forja.works</a>
      
     </div>
     <div class="button-container">

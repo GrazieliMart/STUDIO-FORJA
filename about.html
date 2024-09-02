@@ -30,7 +30,7 @@
     padding: 20px;
     margin-right: 20px;
     margin-left: 20px;
-    background-color: #ffde04;
+    background-color: #005f8f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,16 +41,17 @@
 
 .text-image-div .text h2 {
     font-size: 45px;
-    font-family: 'GoshaSans';
+    font-family: math;
     font-weight: 100;
     color: #fff;
 }
 
 .text-image-div .text p {
     font-size: 20px;
-    color: #000000;
+    color: #ffffffa8;
     font-weight: 100;
-    font-family: monospace;
+    line-height: 15px;
+    font-family: math;
 }
 
 .carousel-nav {
@@ -64,7 +65,7 @@
     height: 30px;
     background-color: #fff;
     border: 1px solid #fff;
-    color: #cfb505;
+    color: #005f8f;
     text-align: center;
     line-height: 20px;
     cursor: pointer;
@@ -76,6 +77,9 @@
     position: relative;
     overflow: hidden;
 }
+.vertical-text img {
+        height: 200px;
+    }
 
 .carousel {
     display: flex;
@@ -103,76 +107,6 @@
     min-width: 100%;
 }
 
-        .navbar {
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    color: #000000;
-    border-top: 5px solid #ffde0400;
-    left: 0;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 0%);
-    transform: none;
-    background-color: rgb(0 0 0 / 0%);
-    backdrop-filter: blur(0px);
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    z-index: 999;
-    transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-    background-color: #000000;
-}
-
-.navbar-nav li a {
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif;
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.navbar.scrolled .navbar-nav li a {
-    color: #ffffff;
-}
-
-.navbar .social-icons a i {
-    background-color: #ffde0400;
-    color: #000000;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 0 5px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar.scrolled .social-icons a i {
-    color: #ffffff;
-}
-
-.navbar-brand img {
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled .navbar-brand img {
-    content: url('assets/logo.png');
-}
-
-.navbar.scrolled {
-    background-color: #000000;
-}
-
-.social-icons {
-    float: right;
-    margin-right: 70px;
-    padding-top: 15px;
-}
         .background-image {
             position: absolute;
             top: 0;
@@ -323,11 +257,12 @@ text-decoration: underline;
             transition: 0.2s;
         }
         .button-right {
-    background-color: gold;
+    background-color: #005f8f;
     padding: 15px;
     cursor: pointer;
     margin-right: -0px;
     margin-top: 450%;
+    color: #fff;
     position: relative;
     width: 150px;
     border: none;
@@ -501,7 +436,7 @@ text-decoration: underline;
 }
 
 .about-div hr {
-    background-color: #ffde04;
+    background-color: #005f8f;
     height: 5px;
     border: none;
     margin-left: -700px;
@@ -511,6 +446,7 @@ text-decoration: underline;
     margin: 0 0 20px 0;
 }
 
+
 .about-div h1 {
     font-family: 'GoshaSans', sans-serif;
     font-weight: 200;
@@ -519,9 +455,9 @@ text-decoration: underline;
     
 }
 .about-div h2 {
-    font-family: 'GoshaSans', sans-serif;
+    font-family: math;
     font-weight: 200;
-    color: #292825;
+    color: #005f8f;
     font-size: 35px;
     
 }
@@ -529,10 +465,10 @@ text-decoration: underline;
     font-family: monospace;
     font-weight: 200;
     color: #999999;
-    font-size: 17px;
+    font-size: 19px;
 }
 .about-div hr {
-    background-color: #ffde04;
+    background-color: #005f8f;
     height: 5px;
     border: none;
     margin-left: -700px;
@@ -544,63 +480,30 @@ text-decoration: underline;
     width: 700px;
     justify-content: center;
 }
-.navbar-nav li a {
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif;
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-.navbar-nav li a:hover {
-    display: block;
-    color: #7a7a7a;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif;
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: 0.2s;
-}
-.navbar .social-icons a i {
-    background-color: #ffde0400;
-    color: #000000;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 0 5px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-.navbar .social-icons a i:hover {
-    background-color: #ffde0400;
-    color: #979797;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 0 5px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-.about-button {
-  
-    bottom: 20px;
-    right: 20px;
-    background-color: #333; /* Cor do botão */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease;
-}
+        .parallax {
+            height: 480px; /* Ajuste a altura conforme necessário */
+            overflow: hidden; /* Para garantir que nada extravase a div */
+            position: relative;
+            background-image: url('assets/parallax.jpg'); /* Substitua pelo caminho da sua imagem */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .parallax-content img{
+            height: 100%;
+        }
 
-.about-button:hover {
-    background-color: #555; /* Cor do botão ao passar o mouse */
-}
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
 .full-width-section {
             position: relative;
             width: 100%;
@@ -666,9 +569,9 @@ text-decoration: underline;
     font-size: 36px;
     margin-bottom: -10px;
 }.text-container h1 {
-    font-family: 'GoshaSans', sans-serif;
+    font-family: math;
     font-size: 44px;
-    color: #fff;
+    color: #000000;
     margin-bottom: 10px;
 }
 .mobile-space {
@@ -680,7 +583,7 @@ text-decoration: underline;
 }
 @media (max-width: 900px) {
     .button-right {
-    background-color: gold;
+    background-color: #005f8f;
     padding: 15px;
     cursor: pointer;
     display: none;
@@ -950,10 +853,53 @@ text-decoration: underline;
     padding: 30px;
     justify-content: center;
 }
+}.navbar-toggler {
+    display: block;
+    color: #000000;
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+    font-size: 40px;
+    cursor: pointer;
 }
+.navbar.scrolled .navbar-nav li a {
+    color: #000000;
+}
+.navbar.scrolled .social-icons a i {
+    color: #000000;
+}
+.navbar.scrolled .contact-buttom {
+    padding: 10px;
+    background-color: #00000000;
+    border-radius: 0px;
+    color: #000000;
+    border: 3px solid #000000;
+    font-weight: 100;
+    transition: 0.2s;
+}
+#projects {
+    text-align: center;
+    margin-left: 20px;
+    background-color: #efefef;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 0px;
+}
+.video-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef00;
+}
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
-<body style="background-color: #0a0e12;">
+<body style="background-color: #ffff;">
     <div class="overlaytop"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/ancoras.js"></script>
@@ -963,7 +909,7 @@ text-decoration: underline;
         <img src="assets/arrow.png" alt="Seta para cima">
     </a>
     <nav class="navbar">
-        <a class="navbar-brand" href="index.html"><img src="assets/logo3.png" alt="Logo"></a>
+        <a class="navbar-brand" href="index.html"><img src="assets/logo2.png" alt="Logo"></a>
         <div class="navbar-toggler">
             <i class="bi bi-list menu-icon"></i>
             <i class="bi bi-x menu-icon d-none"></i>
@@ -977,7 +923,7 @@ text-decoration: underline;
         <div class="social-icons">
             <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
             <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-            <a href="contact.html"><button class="contact-buttom" style="background-color: #ffde04;">Contact Us</button></a>
+            <a href="contact.html"><button class="contact-buttom" >Contact Us</button></a>
         </div>
     </nav>
     
@@ -1007,6 +953,7 @@ text-decoration: underline;
         <a href="#info"><button class="button-right">Know More <i class="bi bi-arrow-down"></i></button></a>
     </div>
     
+   
 <script>window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -1016,31 +963,7 @@ text-decoration: underline;
     }
 });
 </script>
-<div class="text-image-div" id="info">
-    <div class="text">
-        <h2>Design and Projects</h2>
-        <p>At Studio Forja, we blend creativity with functionality to deliver outstanding design solutions. <br>
-            Whether it's branding, web design, or space planning, our team is dedicated to bringing your vision to life.</p>
-        <div class="carousel-nav">
-            <button class="carousel-button" data-slide="1">1</button>
-            <button class="carousel-button" data-slide="2">2</button>
-            <button class="carousel-button" data-slide="3">3</button>
-            <button class="carousel-button" data-slide="4">4</button>
-            <button class="carousel-next">→</button>
-        </div>
-        <br><br>
-    </div>
-    <div class="image">
-        <div class="carousel">
-            <img src="assets/about.png" alt="Image 1">
-            <img src="assets/about (2).png" alt="Image 2">
-            <img src="assets/about (3).png" alt="Image 3">
-            <img src="assets/about (4).png" alt="Image 4">
-            <img src="assets/about (5).png" alt="Image 5">
-            <img src="assets/about (6).png" alt="Image 6">
-        </div>
-    </div>
-</div>
+
 
 
    <script>$(document).ready(function() {
@@ -1077,6 +1000,51 @@ text-decoration: underline;
 </script>
  
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div class="text-container" id="projects">
+   
+
+    <h1>Recents Projects</h1>
+    
+</div>
+
+<div class="containerwork">
+    <div class="item">
+      <a href="charlie.html">
+      <img src="assets/image (1).jpg" alt="Imagem 1" class="zoom-image">
+  
+  
+      <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+        <div class="text-overlay">
+        <h1>ACHARA DUBLIN</h1>
+        <p>Fit out • Interior Design</p>
+      </div></div>
+     </a>
+    </div>
+  
+  
+
+    <div class="item">
+      <a href="handsome.html">
+      <img src="assets/projects (4).png" alt="Imagem 2">
+      
+      <div class="overlay1" style="background-color: rgba(0, 0, 0, 0.671);">  
+        <div class="text-overlay">
+          <h1>HandSome Burguer</h1>
+          <p>Project Design</p>
+      </div></div>
+      </a>
+    </div>
+  
+
+  </div>
+  <div class="video-container">
+    <video id="myVideo" src="assets/about.mp4" autoplay muted loop></video>
+</div>
+
+<!-- GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
 
 <div class="mobile-space">
 <div class="text-container">
@@ -1086,45 +1054,45 @@ text-decoration: underline;
     
 </div> <div class="div-empresas-studio">
     <div class="studio-empresas">
-        <img src="assets/companys (1).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (1).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (22).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (3).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (4).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas">
         <img src="assets/companys (5).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (6).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (6).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (7).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (8).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (4).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas">
         <img src="assets/companys (9).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (10).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (11).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (12).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (3).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (8).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (7).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas" id="mobile-dev">
-        <img src="assets/companys (13).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (14).png" alt="Image 1" class="animate-img">
+        <img src="assets/black (10).png" alt="Image 1" class="animate-img">
+        <img src="assets/companys (9).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (15).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (16).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas"  id="mobile-dev">
-        <img src="assets/companys (17).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (1).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (18).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (19).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (2).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (20).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas"  id="mobile-dev">
-        <img src="assets/companys (21).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (3).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (2).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (23).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (35).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (4).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (8).png" alt="Image 1" class="animate-img">
     </div>
     <div class="studio-empresas"  id="mobile-dev">
-        <img src="assets/companys (25).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (5).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (26).png" alt="Image 1" class="animate-img">
-        <img src="assets/companys (27).png" alt="Image 1" class="animate-img">
+        <img src="assets/new (6).png" alt="Image 1" class="animate-img">
         <img src="assets/companys (28).png" alt="Image 1" class="animate-img">
     </div>
 </div>
@@ -1185,43 +1153,48 @@ text-decoration: underline;
 
   
   
-    <!-- Nova seção horizontal -->
-    <div class="horizontal-section">
-        <div class="vertical-text">
-            <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
-            <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
-            <p>© 2024 studio forja. All rights reserved.</p>
-           
-        </div>
-     
-        <div class="icon-group">
-               <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://forja.works/"><i class="bi bi-globe2"></i> forja.works</a>
-         
-        </div>
-        <div class="button-container">
-           <a href="https://www.instagram.com/studio_forja/"> <button class="cta">
-                <span class="hover-underline-animation"> FOLLOW US </span>
-                <svg
-                  id="arrow-horizontal"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="10"
-                  viewBox="0 0 46 16"
-                >
-                  <path
-                    id="Path_10"
-                    data-name="Path 10"
-                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                    transform="translate(30)"
-                  ></path>
-                </svg>
-              </button></a>
-              
-        </div>
+<div class="horizontal-section">
+    <div class="vertical-text">
+      <img src="assets/logo2.png" alt="">       
     </div>
+    <div class="vertical-text">
+        <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
+        <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
+        <p>© 2024 studio forja. All rights reserved.</p>
+       
+    </div>
+    <a href="#" class="scroll-to-top">
+        <img src="assets/arrow.png" alt="Seta para cima">
+      </a>
+      
+      <script src="js/top.js"></script>
 
+    <div class="icon-group">
+           <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
+     
+    </div>
+    <div class="button-container">
+       <a href="https://www.instagram.com/studio_forja/"> <button class="cta">
+            <span class="hover-underline-animation"> FOLLOW US </span>
+            <svg
+              id="arrow-horizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="10"
+              viewBox="0 0 46 16"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                transform="translate(30)"
+              ></path>
+            </svg>
+          </button></a>
+          
+    </div>
+</div>
     <script src="js/nav.js"></script>
     <a href="#" class="scroll-to-top">
         <img src="assets/arrow.png" alt="Seta para cima">

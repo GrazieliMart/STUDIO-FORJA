@@ -691,39 +691,43 @@ body{
     cursor: pointer;
 }
 .text-content {
-    width: 25%;
-    margin-top: -55px;
-    background-color: #dcd4ce;
-    height: 100%;
-    padding-top: 100px;
-    padding: 30px 20px 0px 20px;
-}
+        width: 25%;
+        margin-top: -55px;
+        background-color: #ffffff;
+        height: 100%;
+        padding-top: 100px;
+        padding: 30px 20px 0px 20px;
+    }
 .text-content h1,
 .text-content h2,
 .text-content p {
     margin: 10px 0;
 }
 .text-content h1{
+    font-family: math;
     font-weight: 200;
     margin-top: 100px;
     font-size: 55px;
 }
-.text-content h2{
-    font-family: monospace;
-
-}
-.text-content p{
-    font-family: monospace;
-    color: #494949;
-    font-size: 20px;
-    font-weight: 100;
-}
-.text-content hr{
-    background-color: #FFDE04;
-    height: 5px;
-    margin-right: -20px;
-    border: none;
-}
+.vertical-text img {
+        height: 200px;
+    }
+.text-content h2 {
+        font-family: math;
+        color: #5670a8;
+    }
+    .text-content p {
+        font-family: math;
+        color: #8c8a8a;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .text-content hr {
+        background-color: #d6d4ca;
+        height: 5px;
+        margin-right: -20px;
+        border: none;
+    }
 .text-content button {
     padding: 10px 20px;
     background-color: #FFDE04;
@@ -739,10 +743,10 @@ body{
 
 }
 .text-container span{
-    color: #ffde04;
+    color: #dcd4ce;
 }
 .text-container p{
-    color: #cccccc;
+    color: #5b5f61;
 }
 .image-gallery {
     margin-top: -30px;
@@ -758,14 +762,15 @@ body{
             transition: transform 0.3s;
         }
         .image-gallery img:hover {
-            transform: scale(1.1);
+          
             cursor: pointer;
         }
-        .text-container{
-            margin: 0;
-            padding: 50px;
-            background-color: #131212;
-        }
+        .text-container {
+        margin: 0;
+        font-family: math;
+        padding: 50px;
+        background-color: #131212;
+    }
         .faixa {
     margin-top: 20px;
     width: 100%;
@@ -803,9 +808,8 @@ body{
 }
 
 .carousel-dots button.active {
-    background-color: #FFDE04; /* Cor do ponto ativo */
-}
-
+        background-color: #0f1923;
+    }
 /* Adicionar estilos para quando o carrossel estiver ativo */
 .carousel-item.active img {
     transform: scale(1.05); /* Efeito de zoom para a imagem ativa */
@@ -820,9 +824,10 @@ body{
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/ancoras.js"></script>
 
-    <div class="overlaytop" style="background-color: #0717ff;"></div>
+    <div class="overlaytop" style="background-color: #0e1242;"></div>
     <nav class="navbar">
-        <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Logo"></a>
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo2.png" alt="Logo"></a>
         <div class="navbar-toggler">
             <i class="bi bi-list menu-icon"></i>
             <i class="bi bi-x menu-icon d-none"></i>
@@ -873,32 +878,44 @@ body{
                 <!-- Dots will be generated dynamically -->
             </div>
         </div>
-        <script>document.addEventListener('DOMContentLoaded', function() {
-            const dotsContainer = document.querySelector('.carousel-dots');
-            const slides = document.querySelectorAll('.carousel-item');
-            let currentSlide = 0;
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dotsContainer = document.querySelector('.carousel-dots');
+                const slides = document.querySelectorAll('.carousel-item');
+                let currentSlide = 0;
+                const slideCount = slides.length;
+                const slideInterval = 2000; // Intervalo de 3 segundos para trocar o slide automaticamente
         
-            // Criar pontos para cada slide
-            slides.forEach((slide, index) => {
-                const dot = document.createElement('button');
-                dot.addEventListener('click', () => goToSlide(index));
-                dotsContainer.appendChild(dot);
-            });
-        
-            // Função para mudar o slide
-            function goToSlide(index) {
-                const offset = -index * 100;
-                document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-                document.querySelectorAll('.carousel-dots button').forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
+                // Criar pontos para cada slide
+                slides.forEach((slide, index) => {
+                    const dot = document.createElement('button');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    dotsContainer.appendChild(dot);
                 });
-                currentSlide = index;
-            }
         
-            // Iniciar o carrossel
-            goToSlide(currentSlide);
-        });
-        </script>
+                // Função para mudar o slide
+                function goToSlide(index) {
+                    const offset = -index * 100;
+                    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+                    document.querySelectorAll('.carousel-dots button').forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                    currentSlide = index;
+                }
+        
+                // Iniciar o carrossel
+                goToSlide(currentSlide);
+        
+                // Função para avançar para o próximo slide
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slideCount;
+                    goToSlide(currentSlide);
+                }
+        
+                // Iniciar o slide automático
+                setInterval(nextSlide, slideInterval);
+            });
+            </script>
         <div class="text-content">
             <div class="align-mobile">
             <h1>Charlie</h1>
@@ -913,7 +930,7 @@ body{
           <h2><i class="bi bi-calendar-check-fill"></i> DATE</h2>
           <p>2024</p>
           <br><br>
-           <a href="https://www.instagram.com/p/C5u3uN7sqhv/?img_index=1"><button class="button-right" style="width: 150px;">See at Instagram</button></a>
+         
         </div></div>
     </div>
     
@@ -970,16 +987,23 @@ body{
     <!-- Nova seção horizontal -->
     <div class="horizontal-section">
         <div class="vertical-text">
+          <img src="assets/logo.png" alt="">       
+        </div>
+        <div class="vertical-text">
             <a href="mailto:caio@forjaworks.com"><p><i class="bi bi-envelope"></i> caio@forjaworks.com</p></a>
             <a href="https://wa.link/pbqwt4"><p><i class="bi bi-telephone-fill"></i> +353 83 848 1886</p></a>
             <p>© 2024 studio forja. All rights reserved.</p>
            
         </div>
-     
+        <a href="#" class="scroll-to-top">
+            <img src="assets/arrow.png" alt="Seta para cima">
+          </a>
+          
+          <script src="js/top.js"></script>
+    
         <div class="icon-group">
                <a href="https://www.instagram.com/studio_forja/"><i class="bi bi-instagram"></i></a>
             <a href="https://wa.link/pbqwt4"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://forja.works/"><i class="bi bi-globe2"></i> forja.works</a>
          
         </div>
         <div class="button-container">
@@ -1003,6 +1027,7 @@ body{
               
         </div>
     </div>
+    
 
     <script src="js/nav.js"></script>
     <a href="#" class="scroll-to-top">

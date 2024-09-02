@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation with GSAP</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 200%;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
+        video {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="myVideo" src="assets/about.mp4" muted></video>
+    </div>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        // Iniciar GSAP e ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        const video = document.getElementById("myVideo");
+
+        // Garantir que o vídeo esteja pronto para manipulação
+        video.addEventListener('loadedmetadata', () => {
+            console.log("Vídeo carregado com duração de: " + video.duration + " segundos");
+
+            // Animação do vídeo com ScrollTrigger
+            gsap.to(video, {
+                currentTime: video.duration, // Anima até o final do vídeo
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".video-container",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    onUpdate: self => {
+                        const progress = self.progress;
+                        video.currentTime = progress * video.duration;
+                        console.log(`Progresso do scroll: ${progress}, Tempo atual do vídeo: ${video.currentTime}`);
+
+                        if (self.direction === -1 && video.currentTime === 0) {
+                            video.pause();
+                        } else if (video.paused) {
+                            video.play();
+                        }
+                    }
+                }
+            });
+        });
+
+        video.addEventListener('error', (e) => {
+            console.error("Erro ao carregar o vídeo:", e);
+        });
+    </script>
+</body>
+</html>

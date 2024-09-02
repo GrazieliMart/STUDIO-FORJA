@@ -14,10 +14,7 @@ body {
     scroll-behavior: smooth;
   }
   
-  ::selection {
-    background: #FFDE04;
-    color: rgb(255, 255, 255);
-  }
+  
   img {
     user-select: none; /* Impede a seleção de texto e elementos */
     -webkit-user-drag: none; /* Impede o arrastar da imagem no Safari */
@@ -44,11 +41,18 @@ body {
     
     width: 100%;
     height: 100%;
-    background-color: #FFDE04;
+    background-color: #e0dede;
     z-index: 9999;
     animation: slideOut 2s ease forwards;
   }
-  
+  .faixa-footer{
+    justify-content: center;
+    display: flex;
+    color: #9e9d9d;
+  }
+  .faixa-footer a{
+    color: #141414;
+  }
   @keyframes slideOut {
   0% {
         height: 100%; /* Começa com altura zero */
@@ -83,10 +87,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #30304887; /* Leve tom preto */
-    z-index: 99; /* Certifique-se de que esteja acima de outros elementos */
-  }
-  
+    background-color: #000000a6;
+    z-index: 99;
+}
   .d-none {
     display: none;
   }
@@ -101,29 +104,64 @@ body {
     margin: 0 auto;
     position: fixed;
     top: 0;
-  
+    color: #ffffff;
+    border-top: 5px solid #ffde0400;
     left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.486);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0%);
     transform: none;
-    background-color: #000000;
-    backdrop-filter: blur(10px);
+    background-color: rgb(255 255 255);
+    backdrop-filter: blur(0px);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     z-index: 999;
-}.navbar .social-icons a i {
-  background-color: #ffde0400;
+    transition: background-color 0.3s ease;
+}.navbar-nav li a {
+  display: block;
+  color: #000000;
+  font-weight: 100;
+  text-align: center;
+  padding: 14px 16px;
+  letter-spacing: 2px;
+  font-family: math;
+  font-size: 14px;
+  padding-top: 35px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.navbar.scrolled .navbar-brand img {
+  content: url(../assets/logo2.png);
+}
+.navbar.scrolled .navbar-nav li a {
   color: #ffffff;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 5px;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s;
+}
+.navbar.scrolled .navbar-nav li a:hover {
+  color: #ffffff;
+}
+.navbar.scrolled .social-icons a i {
+  color: #ffffff;
 }
 
-.navbar .social-icons a i:hover {
+.navbar.scrolled .contact-buttom {
+  padding: 10px;
+  background-color: #00000000;
+  border-radius: 0px;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  font-weight: bold;
   transition: 0.2s;
-    background-color: #c0aa2e00; /* Cor de fundo ao passar o mouse */
-    color: #adadad; /* Cor do ícone ao passar o mouse */
+}
+
+.navbar-nav li a:hover {
+  display: block;
+  color: #7a7a7a;
+  text-align: center;
+  
+  padding: 14px 16px;
+  /* font-family: 'GoshaSans', sans-serif; */
+  font-size: 14px;
+  padding-top: 30px;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
   .navbar-brand {
@@ -140,13 +178,10 @@ body {
     margin-left: 50px;
   }
   .navbar-nav {
-    float: left;
-    margin: 0;
-    padding: 0;
+    display: flow;
     list-style: none;
-    position: absolute;
-    left: 25%;
-    transform: translateX(-50%);
+    margin-left: 55%;
+    margin-top: -150px;
 }
   .navbar-nav li {
     float: left;
@@ -157,30 +192,14 @@ body {
     font-weight: bold;
 }
 
-.navbar-nav li a {
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 14px 16px;
-    font-family: 'GoshaSans', sans-serif; /* Use a fonte definida anteriormente */
-    font-size: 14px;
-    padding-top: 30px;
-    text-decoration: none;
-    transition: 0.2s;
+.social-icons {
+  float: right;
+  margin-right: 70px;
+  padding-top: 15px;
 }
-  .navbar-nav li a:hover {
-    color: #aaaaaa;
-   
-  }
-
-  .social-icons {
-    float: right;
-    margin-right: 100px;
-    padding-top: 15px;
-  }
   .social-icons a {
     display: inline-block;
-    color: #9c8816;
+    color: #ffffff;
     text-align: center;
     padding: 14px 2px;
     text-decoration: none;
@@ -210,11 +229,30 @@ body {
     color: #141414;
     transition: 0.2s;
   }
-  .navbar-toggler
-  {
-    display: none;
-  
-  }
+  .navbar .social-icons a i {
+    background-color: #ffde0400;
+    color: #000000;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar.scrolled {
+  background-color: #00000003;
+  box-shadow: 0px 10px 10px #00000012;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+  .navbar-toggler {
+    display: block;
+    color: #FFF;
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+    font-size: 40px;
+    cursor: pointer;
+}
 
 @media (max-width: 1500px) {
     .navbar {
@@ -232,7 +270,7 @@ body {
       text-align: left;
       font-weight: 400;
       margin-bottom: 5px;
-      margin-top: 15px;
+      margin-top: 5%;
       margin-left: 5%;
   }
     .navbar-nav {
@@ -254,15 +292,17 @@ body {
     margin: 0 auto;
     position: fixed;
     top: 0;
-    border-top: 10px solid #ffde04;
+    color: #000000;
+    border-top: 5px solid #ffde0400;
     left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0%);
     transform: none;
-    background-color: rgb(0, 0, 0);
-    backdrop-filter: blur(10px);
+    background-color: rgb(0 0 0 / 0%);
+    backdrop-filter: blur(0px);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     z-index: 999;
+    transition: background-color 0.3s ease;
 }
     .navbar-nav.active {
       display: flex;
@@ -273,9 +313,29 @@ body {
       width: 100%;
     }
     .navbar-nav li a {
-      width: 100%;
-     
-    }
+      display: block;
+      color: #ffffff;
+      font-weight: 100;
+      text-align: center;
+      padding: 14px 16px;
+      font-family: 'futura', sans-serif;
+      font-size: 14px;
+      padding-top: 35px;
+      text-decoration: none;
+      transition: 0.2s;
+  }
+  .navbar-nav li a:hover {
+    display: block;
+    color: #7a7a7a;
+    text-align: center;
+    color: #fff;
+    padding: 14px 16px;
+    /* font-family: 'GoshaSans', sans-serif; */
+    font-size: 14px;
+    padding-top: 30px;
+    text-decoration: none;
+    transition: 0.2s;
+}
     .social-icons {
       float: none;
       display: none;
@@ -292,91 +352,166 @@ body {
         cursor: pointer;
     }
   
-  }.video-container {
+  }.carousel-container {
     position: relative;
     width: 100%;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:00px;
     height: 950px;
-    transition: height 0.1s ease; /* Transição suave para alteração de altura */
+    overflow: hidden;
+    transition: height 0.1s ease;
 }
 
-.video-container video {
-  width: 100%;
-  height: 100%;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  object-fit: cover;
-}
-/* Define a animação de surgir da esquerda para a direita */
-@keyframes slideInFromLeft {
-  from {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    object-fit: cover;
+    display: none;
 }
 
-/* Adiciona a animação com um atraso de 0.3s */
+.carousel-images img:first-child {
+    display: block;
+}
+
 .overlay-content {
-  position: absolute;
-  top: 25%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  color: white;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0);
-  animation: slideInFromLeft 2s ease-out 0.3s forwards; /* Animação de 1s com atraso de 0.3s */
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+    animation: slideInFromLeft 2s ease-out 0.3s forwards;
 }
-
 .overlay-content p {
   margin: 10px 0;
+  FONT-WEIGHT: unset;
   font-weight: 100;
-  font-family: monospace;
-  font-size: 40px;
+  font-family: math;
+  font-size: 20px;
   margin-left: 5%;
   text-align: left;
 }
-
 .overlay-content h1 {
   font-size: 105px;
   line-height: 65px;
   text-align: left;
   font-weight: 400;
-  margin-bottom: 30px;
-  color: #FFDE04;
+  font-family: math;
+  margin-bottom: 0px;
+  color: #ffffff;
   margin-top: 15px;
   margin-left: 5%;
 }
 
 .overlay-content h2 {
-  font-size: 45px;
-  line-height: 35px;
-  text-align: left;
-  font-weight: 400;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  margin-left: 5%;
-}
-
-.overlay-content button {
+    font-size: 45px;
+    line-height: 35px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-top: 15px;
     margin-left: 5%;
 }
 
+/* Estilizando a navegação do carrossel */
+.carousel-navigation {
+    display: flex;  margin-left: 5%;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-prev, .carousel-next {
+  background-color: rgb(255 255 255);
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 0 15px;
+}
+.carousel-prev:hover{
+  transition: 0.2s;
+  color: #fff;
+  background-color: #9e9d9d;
+}
+.carousel-next:hover{
+  transition: 0.2s;
+  color: #fff;
+  background-color: #9e9d9d;
+}
+.carousel-texts {
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 20px;
+  WIDTH: 300PX;
+}
+
+.carousel-text {
+    display: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+.carousel-text.active {
+    display: block;
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  display: block; /* Corrigir para garantir que a imagem apareça corretamente */
+}
+
+.carousel-images img.active {
+  opacity: 1;
+}
+
+
+
 @media (max-width: 1100px) {
-  .overlay-content h1 {
-    font-size: 20PX;
-    text-align: center;
-    margin: 0px 20px;
+ /* Estilos para o texto do título */
+.overlay-content h1 {
+  font-size: 3em; /* Ajuste o tamanho da fonte conforme necessário */
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: .15em solid orange; /* Adiciona um "cursor" piscante */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* Animação de digitação */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Animação do cursor piscante */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; /* Cor do cursor piscante */ }
 }
 .overlay-content h2 {
   font-size: 25px;
